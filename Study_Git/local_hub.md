@@ -137,8 +137,22 @@ nothing to commit, working tree clean
 
 ## 提交到远程仓库
 使用命令提交至远程仓库：
+
 ```bash
+# 1.首先需要添加远程仓库
+git remote add origin https://github.com/Ternity/Ternity.github.io/tree/master
+# 2.如果网络有问题，可以使用SSH而不是HTTPS
+git remote set-url origin git@github.com:Ternity/Ternity.github.io.git
+# 3.将master分支推送到远程仓库
 git push origin master
+# 4.也可以将所有分支和标签推送到远程仓库
+git push new-origin --all
+git push new-origin --tags
+# 如果需要添加到新远程仓库
+git remote add new-origin <新仓库的URL>
+# 然后执行上面2-4，然后有需要可以删除旧的远程仓库，并重命名新仓库
+git remote remove origin
+git remote rename new-origin origin
 ```
 当我们提交至remote 仓库时候，输出：
 ```log
@@ -156,3 +170,16 @@ To github.com:Ternity/Trinity.github.io.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
+## 将本地master分支推送到远程main分支
+本地master推送到远程main分支
+```bash
+git push origin master:main
+```
+如果是想将本地master分支重命名为main分支并推送到master，则
+```bash
+git branch -m master main
+git push origin main
+```
+
+
+
