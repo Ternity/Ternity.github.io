@@ -2,6 +2,10 @@
 Welcome to my  persional Homepage！
 ## Let‘s strart together!
 **The webpage is currently under construction**
+## Github 学习笔记
+[个人GitHub学习笔记](https://github.com/Ternity/Ternity.github.io/blob/main/Study_Git/local_hub.md)
+
+
 
 <div style="color:white; background-color:#354538; border: 1px solid #FFE0C3; border-radius: 10px; margin-bottom:0rem">
     <p style="margin:1rem; padding-left: 1rem; line-height: 2.5;">
