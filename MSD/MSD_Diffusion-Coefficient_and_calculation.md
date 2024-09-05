@@ -8,8 +8,9 @@ $$MSD=R(t)=<|r(t)-r(0)|^2>$$
 
 ## Reference
 bohrium notebook
+
 动力学性质计算与检验——以计算体系扩散性质为例
 
 扩散系数计算时NPT和NVT系综的影响NPT-NVT Simulation Settings on Diffusion Coefficient Calculation
 
-MSD_Diffusion-Coefficient_and_calculation.md
+拿分子动力学算个扩散系数，怎么这么多讲究
