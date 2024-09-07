@@ -22,10 +22,11 @@
 * [修改文件](#charpt3)
 * [同步至远程仓库](#charpt4)
 * [多分支协作流程](#charpt5)
-    * [创建新分支](#charpt5.1)
-    * [提交远端](#charpt5.2)
-    * [同步远端](#charpt5.3)
-    * [合并修改](#charpt5.4)
+  * [创建新分支](#charpt5.1)
+  * [提交远端](#charpt5.2)
+  * [同步远端](#charpt5.3)
+  * [合并修改](#charpt5.4)
+  * [删除分支](#charpt5.5)
 
 ## 1. 创建版本库 <a id ='charpt1'></a>
 将目录变为Git可管理的仓库：
@@ -189,7 +190,7 @@ git push origin main
 ```
 
 ## 5. 多分支协作流程 <a id ='charpt5'></a>
-**创建新分支-提交远端-同步远端-合并修改**
+**创建新分支-提交远端-同步远端-合并修改-删除分支**
 ### 5.1 创建新分支 <a id ='charpt5.1'></a>
 无论是clone别人的代码还是自己本地的main(master)分支的代码，直接在main分支上修改是**不良行为**。一方面，对于多人协作仓库，创建新的分
 支可以区分不同人的工作；另一方面，新的PR(pull request)也不会使之前的main的code失效。因此我们可以使用如下命令从原有的`main`分支复制一个新的分支,并重命名为`dev`分支：
@@ -234,6 +235,27 @@ git rebase main
 ```bash
 git push -f origin dev    # 由于rebase，需要强制推送
 ```
-一切准备就绪，我们可以将GitHub的`dev`版本的代码合并到`main`分支，此事即为**Pull Request(PR)**：
+一切准备就绪，我们可以将GitHub的`dev`版本的代码合并到`main`分支，此事即为**Pull Request(PR)**：<br>
+这里需要在GitHub上操作。<br>
+![Commpare&pull_request](Commpare&pull_request.png)<br>
+在确认New pull request后，代码管理员有三个选项可选：<br>
+![merge](merge.png)<br>
+`Merge pull request`：所有添加到`dev`分支的`commit`都会被添加到`main`分支，由于`commit`可能很多，不推荐。<br>
+`Squash and merge`：将`dev`分支的所有`commit`合并为一个`commit`，然后再添加到`main`分支，推荐。<br>
+`Rebase and merge`：将`dev`分支的所有`commit`合并为一个`commit`，并`rebase`到`main`分支。<br>
+
+我们希望`main`分支里的commit尽可能简洁且代码可正常工作，因此推荐代码管理员选择`Squash and merge`操作，形成新的commit`uodate2`。
+### 5.5 删除分支 <a id ='charpt5.5'></a>
+当`dev`分支的代码合并到`main`分支后，`dev`分支就没有存在的必要了，可以删除。<br>
+GitHub上有操作为`Delete branch`。这样远程仓库的`dev`分支就被删除了。<br>
+![Delete branch](Delete_branch.png)<br>
+然后本地的`dev`分支也可以删除：
 ```bash
-git checkout main
+git checkout main   # 本地分支切换到main
+git branch -D dev   # 删除dev分支
+```
+将远程`main`分支最新更新`update2`同步到本地：
+```bash
+git pull origin main
+```
+这时候，远程、本地git的`main`分支内容就一致啦！
