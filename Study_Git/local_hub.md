@@ -33,7 +33,7 @@ Initialized empty Git repository in /Users/michael/learngit/.git/
 ```
 目录下多一个`.git`目录，没事别找他麻烦。
 
-## 添加一个文件到仓库
+## 添加一个文件到仓库 <a id ='charpt2'></a>
 ### 第一步 添加文件
 编写一个README.md文件，注意要放到`.git`同目录下，使用命令`git add`添加到仓库：
 ```bash
@@ -45,7 +45,7 @@ git add README.md
 ```bash
 git commit -m "add readme file"
 ```
-## 修改文件
+## 修改文件 <a id ='charpt3'></a>
 ### 第一步 修改文件
 向README.md文件中添加：
 ```log
@@ -135,7 +135,7 @@ nothing to commit, working tree clean
 可以看到git表示当前没有在暂存区的文件，工作区是干净的。
 
 
-## 提交到远程仓库
+## 同步到远程仓库 <a id ='charpt4'></a>
 使用命令提交至远程仓库：
 
 ```bash
