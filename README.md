@@ -21,6 +21,6 @@ Welcome to my  persional Homepage！
         </i>
         <br/>
         <i>Date：2023-09-11</i><br/>
-        <i>Need more help? </a>See more information in <a rel="license" href="https://ternity.github.io//">My GitHub Homepage </a>or send me email. Thanks!</i><br/>
+        <i>Need more help? See more information in <a rel="license" href="https://ternity.github.io//">My GitHub Homepage </a>or send me email. Thanks!</i><br/>
     </p>
 </div>
