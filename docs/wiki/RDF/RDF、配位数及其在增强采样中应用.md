@@ -57,7 +57,10 @@ $$ n(r') = 4\pi\rho\int_0^{r'} g(r)r^2dr  $$
 
 ## calculation CN by Python
 
-
+```python
+# under building
+from ase.io import read
+```
 
 ## CN and applications in enhanced sampling
 
