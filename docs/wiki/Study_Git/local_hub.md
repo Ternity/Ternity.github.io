@@ -1,3 +1,10 @@
+---
+draft: true 
+date: 2024-09-08 
+categories:
+  - AAA
+  - BBB
+---
 # 学习如何使用git
 <div style="color:white; background-color:#354538; border: 1px solid #FFE0C3; border-radius: 10px; margin-bottom:0rem">
     <p style="margin:1rem; padding-left: 1rem; line-height: 2.5;">

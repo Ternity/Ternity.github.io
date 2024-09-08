@@ -1,0 +1,21 @@
+site_name: Qinghan's Personal Homepage
+site_url: https://ternity.github.io/
+theme:
+  name: material
+
+plugins:
+  - blog:
+      blog_dir: ./blog
+
+nav:
+  - Home: index.md
+  - Wikis:
+    - MSD学习笔记:
+      - wiki/MSD/MSD_Diffusion-Coefficient_and_calculation.md
+    - RDF学习笔记:
+      - wiki/RDF/RDF、配位数及其在增强采样中应用.md
+    - Git学习笔记:
+      - wiki/Study_Git/local_hub.md
+  - Blog:
+    - blog/index.md
+    - blog/posts/hello-world.md
