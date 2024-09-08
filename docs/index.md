@@ -1,6 +1,7 @@
 # Welcome to My Personal Homepage
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+get started visit [getting-started](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
 ## Commands
 

@@ -17,6 +17,7 @@ categories:
         <br/>
         <i>Date：2024-09-08</i><br/>
         <i>Need more help? </a>See more information in <a rel="license" href="https://ternity.github.io/">My GitHub Homepage </a>or send me email. Thanks!</i><br/>
+       
     </p>
 </div>
 
@@ -36,6 +37,7 @@ categories:
   * [合并修改](#charpt6.4)
   * [删除分支](#charpt6.5)
 
+
 ## 1. 创建版本库 <a id ='charpt1'></a>
 将目录变为Git可管理的仓库：
 ```bash
@@ -48,6 +50,7 @@ Initialized empty Git repository in /Users/michael/learngit/.git/
 目录下多一个`.git`目录，没事别找他麻烦。
 
 ## 2. 添加一个文件到仓库 <a id ='charpt2'></a>
+
 ### 第一步 添加文件
 编写一个README.md文件，注意要放到`.git`同目录下，使用命令`git add`添加到仓库：
 ```bash
@@ -59,6 +62,7 @@ git add README.md
 ```bash
 git commit -m "add readme file"
 ```
+
 ## 3. 修改文件 <a id ='charpt3'></a>
 ### 第一步 修改文件
 向README.md文件中添加：
@@ -151,6 +155,7 @@ nothing to commit, working tree clean
 可以看到git表示当前没有在暂存区的文件，工作区是干净的。
 
 
+
 ## 4. 同步到远程仓库 <a id ='charpt4'></a>
 使用命令提交至远程仓库：
 
@@ -186,7 +191,9 @@ To github.com:Ternity/Trinity.github.io.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
+
 ## 5. 将本地master分支推送到远程main分支 <a id ='charpt5'></a>
+
 本地master推送到远程main分支
 ```bash
 git push origin master:main
@@ -197,9 +204,11 @@ git branch -m master main
 git push origin main
 ```
 
+
 ## 6. 多分支协作流程 <a id ='charpt6'></a>
 **创建新分支-提交远端-同步远端-合并修改-删除分支**
 ### 6.1 创建新分支 <a id ='charpt6.1'></a>
+
 无论是clone别人的代码还是自己本地的main(master)分支的代码，直接在main分支上修改是**不良行为**。一方面，对于多人协作仓库，创建新的分
 支可以区分不同人的工作；另一方面，新的PR(pull request)也不会使之前的main的code失效。因此我们可以使用如下命令从原有的`main`分支复制一个新的分支,并重命名为`dev`分支：
 ```bash
@@ -215,6 +224,7 @@ git branch
   main
 ```
 我们可以在dev分支上修改，添加修改文件到暂存区(`git add xxx`)，确认无误(`git diff`)，提交修改到本地仓库(`git commit -m "xxx"`)。
+
 ### 6.2 提交远端 <a id ='charpt6.2'></a>
 将本地git的dev分支推送到远程仓库(`git push origin dev`)。这样就不会影响到远程仓库的main分支的代码。
 ### 6.3 同步远端 <a id ='charpt6.3'></a>
@@ -279,7 +289,9 @@ git push -f origin dev    # 由于rebase，需要强制推送
 `Rebase and merge`：将`dev`分支的所有`commit`合并为一个`commit`，并`rebase`到`main`分支。<br>
 
 我们希望`main`分支里的commit尽可能简洁且代码可正常工作，因此推荐代码管理员选择`Squash and merge`操作，形成新的commit`uodate2`。
+
 ### 6.5 删除分支 <a id ='charpt6.5'></a>
+
 当`dev`分支的代码合并到`main`分支后，`dev`分支就没有存在的必要了，可以删除。<br>
 GitHub上有操作为`Delete branch`。这样远程仓库的`dev`分支就被删除了。<br>
 ![Delete branch](Delete_branch.png)<br>
