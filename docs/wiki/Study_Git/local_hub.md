@@ -219,7 +219,7 @@ git branch
 将本地git的dev分支推送到远程仓库(`git push origin dev`)。这样就不会影响到远程仓库的main分支的代码。
 ### 6.3 同步远端 <a id ='charpt6.3'></a>
 一种很常见的情况是，远程仓库中的`main`分支有了更新`update`，而我们的`dev`分支相对于init代码也有了更新`feature`，这时候我们需要测试我们的`feature`能否在main分支更新的`update`下工作。这需要将远程仓库的`main`分支的`update`更新同步到本地仓库的`dev`分支。
-
+#### 6.3.1 远程仓库`main`分支最新的`update`同步到本地仓库的`main`分支
 首先，我们需要切换当前分支`dev`到`main`分支：
 ```bash
 git checkout main
@@ -229,6 +229,7 @@ git checkout main
 git pull origin main
 ```
 这样我们本地git分支`main`就获得了远程仓库的`main`分支的`update`。
+#### 6.3.2 将本地仓库的`main`分支的`update`同步到`dev`分支
 接下来我回到`dev`分支，并将`main`分支的更新同步到`dev`分支：
 ```bash
 git checkout dev
@@ -237,7 +238,32 @@ git rebase main
 `git rebase main`这个命令的作用：<br>
 之前`dev`的`feature`先不管,将`mai`n的修改同步到`dev`,然后在此基础上将`feature`尝试合并。
 然后再将本地仓库的`main`分支合并到本地仓库的`dev`分支。<br>
-这个过程可能会有 rebase conflict，需要手动选择冲突代码。
+#### 6.3.3 解决冲突
+上面这个过程可能会有 rebase conflict，需要手动选择冲突代码。
+上一步的`git rebase main`命令会提示冲突的文件，也可使用`git status`命令查看冲突文件。
+```bash
+warning: squelched 2140 whitespace errors
+warning: 2145 lines add whitespace errors.
+Falling back to patching base and 3-way merge...
+Auto-merging docs/index.md
+CONFLICT (add/add): Merge conflict in docs/index.md
+error: Failed to merge in the changes.
+Patch failed at 0002 create web use mkdocs-material
+Use 'git am --show-current-patch' to see the failed patch
+
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+```
+找到相应的文件，这里是`docs/index.md`，打开文件分析选择需要保留的部分。
+<br>使用`git add`命令将冲突文件标记为已解决，然后使用`git rebase --continue`继续rebase。
+```bash
+git add docs/index.md
+git rebase --continue
+```
+重复上述步骤，直到rebase完成。
+
 ### 6.4 合并修改 <a id ='charpt6.4'></a>
 更新完`dev`分支后，我们可以将本地`dev`分支更新到远程仓库的`dev`分支：
 ```bash
