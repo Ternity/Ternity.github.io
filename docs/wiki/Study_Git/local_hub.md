@@ -17,8 +17,6 @@ categories:
         <br/>
         <i>Date：2024-09-08</i><br/>
         <i>Need more help? </a>See more information in <a rel="license" href="https://ternity.github.io/">My GitHub Homepage </a>or send me email. Thanks!</i><br/>
-       
-    </p>
 </div>
 
 <br/>
