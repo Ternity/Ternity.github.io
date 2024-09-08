@@ -1,0 +1,851 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ternity.github.io/wiki/RDF/RDF%E3%80%81%E9%85%8D%E4%BD%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7%E4%B8%AD%E5%BA%94%E7%94%A8/">
+      
+      
+        <link rel="prev" href="../../MSD/MSD_Diffusion-Coefficient_and_calculation/">
+      
+      
+        <link rel="next" href="../../Study_Git/local_hub/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>RDF、配位数及其在增强采样中应用 - Qinghan's Personal Homepage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#radial-distribution-function-rdf" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Qinghan&#39;s Personal Homepage" class="md-header__button md-logo" aria-label="Qinghan's Personal Homepage" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qinghan's Personal Homepage
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RDF、配位数及其在增强采样中应用
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Qinghan&#39;s Personal Homepage" class="md-nav__button md-logo" aria-label="Qinghan's Personal Homepage" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Qinghan's Personal Homepage
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wikis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Wikis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MSD学习笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            MSD学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSD/MSD_Diffusion-Coefficient_and_calculation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    均方位移mean squre displacement (MSD) 和 扩散系数Diffusion Coefficient的理解与计算
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    RDF学习笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            RDF学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RDF、配位数及其在增强采样中应用
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    RDF、配位数及其在增强采样中应用
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#radial-distribution-function-rdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      radial distribution function (RDF)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="radial distribution function (RDF)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rdf-define" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF define
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdf-in-solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF in solid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdf-in-liquid" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF in liquid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdf-in-gas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF in gas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordination-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      coordination number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-cn-by-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      calculation CN by Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cn-and-applications-in-enhanced-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      CN and applications in enhanced sampling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git学习笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Git学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Study_Git/local_hub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习如何使用git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/posts/hello-world.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#radial-distribution-function-rdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      radial distribution function (RDF)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="radial distribution function (RDF)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rdf-define" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF define
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdf-in-solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF in solid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdf-in-liquid" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF in liquid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdf-in-gas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF in gas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordination-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      coordination number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-cn-by-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      calculation CN by Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cn-and-applications-in-enhanced-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      CN and applications in enhanced sampling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>RDF、配位数及其在增强采样中应用</h1>
+
+<h2 id="radial-distribution-function-rdf">radial distribution function (RDF)</h2>
+<h3 id="rdf-define">RDF define</h3>
+<p><img alt="" src="../image_1.14c83607.png" /></p>
+<p>径向分布函数，RDF，定义如下：</p>
+<p>$$g(r)=\frac{dn_r}{dV_r∗\rho}\approx\frac{dn_r}{4\pi r^2 dr∗\rho}$$</p>
+<p>其中$dN_r$是厚度为$d_r$的球壳中粒子数(上式中球壳体积仅在$d_r \rightarrow 0$时成立)</p>
+<p>其物理意义是在一个粒子距离r处找到另一指定类型粒子的概率。</p>
+<p>​$g(r)$​将平均密度​$\rho^{bulk}$​和局部密度​$\rho$​联系起来：</p>
+<p>$$ \rho(r) = \rho^{bulk}g(r)  $$</p>
+<p>位于中央的参考分子（粒子）附近（r值小）局部密度​$\rho$​不同于系统的平均密度​$\rho^{bulk}$​; 参考分子距离较远处的（r值大）局部密度​$\rho$​接近系统的平均密度​$\rho^{bulk}$​</p>
+<h3 id="rdf-in-solid">RDF in solid</h3>
+<p><img alt="" src="../image_2.d60e2754.png" /></p>
+<p>固体是有规律的周期性体系，粒子在晶格位置附近震动。因此可以观察到两点：</p>
+<ul>
+<li>由数个峰组成，峰与峰之间g(r)=0，说明峰之间找不到原子，因为粒子周期性排布</li>
+<li>每个峰并非一个线，而是有宽度的，因为原子在晶格位置附近震动</li>
+</ul>
+<h3 id="rdf-in-liquid">RDF in liquid</h3>
+<p>液体属于近程有序远程无序。当r较小，出现数个峰。第一个峰最尖锐，通常出现在​​​​$\sigma$​​​​,表示第一个coordination sphere（配位壳，即​​​​$dr$​​​​所定义的球壳状区域）;随后峰值将大致间隔​​​​$\sigma$​​​​出现，但高度远小于第一个。当r值增大，粒子之间彼此独立、无关，g(r)​​​$\rightarrow 1$​​​, ​​$\rho^{local}\rightarrow\rho^{bulk}$​​。</p>
+<h3 id="rdf-in-gas">RDF in gas</h3>
+<p>气体没有规则结构，真实气体RDF只有一个coordination sphere， 且将迅速衰减之气体的正常<!--[if mathML]><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>𝜌</mml:mi><mml:mrow><mml:mi>b</mml:mi><mml:mi>u</mml:mi><mml:mi>l</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msup></mml:math><![endif]-->​​</p>
+<ul>
+<li>g(r) = 0, when r &lt; $\sigma$</li>
+<li>g(r) &gt; 1, when $\sigma &lt; r &lt; 2\sigma$</li>
+<li>g(r) = 1, when r &gt; 2$\sigma$</li>
+</ul>
+<h2 id="coordination-number">coordination number</h2>
+<p>coordination number, CN，配位数，用于表示每个coordination sphere（配位壳）中找到粒子的数量。个根据之前定义的RDF公式，在球坐标系中将径向分布函数g(r)积分至它的第一个极小值，得到配位数：</p>
+<p>$$ n(r') = 4\pi\rho\int_0^{r'} g(r)r^2dr  $$</p>
+<p>分子间相互作用，类似于LJ势，吸引力较弱且各向同性，斥力强且短程，因此当液体中分子间没有氢键或静电相互作用，分子将以有效的形式推积，从而避免排斥。最有效的排列方式就是每个粒子有12个近邻，即CN=12.</p>
+<p>当分子间有氢键和静电作用，如水，CN将很小（在第一coordination sphere中=4~5），因为液体将使其在第一个coordination sphere中氢键作用最大化。</p>
+<h2 id="calculation-cn-by-python">calculation CN by Python</h2>
+<h2 id="cn-and-applications-in-enhanced-sampling">CN and applications in enhanced sampling</h2>
+<p>在增强采样中，CN定义为：</p>
+<p>$$ \sum_{i \in A}1\sum_{j \in B} s_{ij} ​ $$</p>
+<p>当原子i(属于groupA)和j(属于groupB)成键，​$s_{ij}$​=1，反之其他情况\=0。通常​$s_{ij}$​使用一个开关函数(switching function), 从而保证CV是连续变化可导的。通常，​$s_{ij}$​被定义为：</p>
+<p>$$ s(r_{ij}) = \frac{1-(\frac{r_{ij}-d_0}{r_0})^n}{1-(\frac{r_{ij}-d_0}{r_0})^m}  $$</p>
+<p>默认d~0~=0, n=6, m=2n</p>
+<p>公式当中，​$r_{ij}$是两组原子i和j(分属于groupA和B)之间的距离。</p>
+<p>$d_0$是公式的阈值，决定$r_{ij}$何时开始影响开关函数$s_{ij}$的值。当$r_{ij}$逐渐接近$d_0$，函数$s_{ij}$逐渐增大至1；当$r_{ij}$远大于$d_0$时，函数$s_{ij}$趋近于0。因此，可以将$d_0$理解为<strong>原子间距离的切换点</strong>，远离$d_0$，原子间相互作用显著减弱。</p>
+<p>​$r_0$​用于控制函数​$s_{ij}$​的平滑程度，从而决定了当原子间距​$r_{ij}$​接近​$d_0$​时候，函数​$s_{ij}$​变化速度。当​$r_0$​越大，函数​$s_{ij}$​变化越平缓，配位数(​$s_{ij}$​)连续性越好。但是​$r_0$​过大，配位数(​$s_{ij}$​)变得不精确。至于配位数需要连续变化，是因为原子间相互作用强度连续变化而不是离散的。</p>
+<p>当开关函数应用在配位数中，通常设置​​$d_0=0$​​,而将阈值的功能赋予给参数​​$r_0$​​。当​​$r_{ij}0.5$​​，视为两原子间成键。这样，我们通过设置不同的阈值​​$r_0$​​来区分不同的状态。对于阈值的选取，通常经验是设置在1.0-1.5 Å，在此基础上迭代优化阈值的选取。</p>
+<p>其他类型的开关函数定义可见<a href="https://www.plumed.org/doc-v2.7/user-doc/html/switchingfunction.html">plumed官网</a></p>
+<p>可使用邻居列表减少计算量，具体见<a href="https://www.plumed.org/doc-v2.7/user-doc/html/_c_o_o_r_d_i_n_a_t_i_o_n.html">plumed官网</a>。其他操作及选项也可见前述网址。</p>
+<p>一般用于侦测原子之间的键或侦测不同反应路径。</p>
+<p><img alt="" src="../image_3.3d6f2d89.png" /></p>
+<p><img alt="" src="../image_4.aa4df3e9.png" /></p>
+<p><img alt="" src="../image_5.f9ba7c69.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
