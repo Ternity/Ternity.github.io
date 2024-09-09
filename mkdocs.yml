@@ -12,10 +12,12 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.superfences
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
 
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMM
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
@@ -26,6 +28,8 @@ nav:
       - wiki/RDF/RDF、配位数及其在增强采样中应用.md
     - Git学习笔记:
       - wiki/Study_Git/local_hub.md
+    - VASP学习笔记:
+      - wiki/VASP/基于AIMD的约束MD-增强采样-自由能计算.md
   - Blog:
     - blog/index.md
     - blog/posts/hello-world.md
