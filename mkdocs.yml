@@ -2,8 +2,11 @@ site_name: Qinghan's Personal Homepage
 site_url: https://ternity.github.io/
 theme:
   name: material
-   features:
+  features:
     - navigation.expand
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
 
 plugins:
   - blog:

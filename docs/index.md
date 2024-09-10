@@ -34,6 +34,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 <br>优美的参考: [鹤翔万里的笔记本](https://note.tonycrane.cc/)
 <br>优美的参考: [RonaldLN的笔记本](https://ronaldln.github.io/MyPamphlet-Blog/category/configure-debug/),在Configure & Debug有一些关于mkdocs的内容
 <br>对LaTeX的支持: [MathJax and KaTeX for MKDocs](https://squidfunk.github.io/mkdocs-material/reference/math/#mathjax-mkdocsyml)
+<br>左侧导航栏设置：[导航设置](https://afeiroom.github.io/work/notes/mkdocs/navigation/)
 
 
 ## Project layout
