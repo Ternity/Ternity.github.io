@@ -22,6 +22,15 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.arithmatex:
       generic: true
+  - admonition
+  - codehilite
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.betterem
+  - pymdownx.magiclink
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -29,7 +38,9 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - Wikis:
+  - MKDocs: 
+    - How_to_edit/howtodo.md
+  - Wiki:
     - MSD学习笔记:
       - wiki/MSD/MSD_Diffusion-Coefficient_and_calculation.md
     - RDF学习笔记:
@@ -43,5 +54,6 @@ nav:
         - wiki/恒电势方法-电荷-极化力场系列/DFT静态-AIMD-Geo-Opt下的恒电势/Norskov关于能垒的恒电势校正思路.md
 
   - Blog:
-    - blog/index.md
-    - blog/posts/hello-world.md
+    - Start: blog/index.md
+    - Hello World: blog/posts/hello-world.md
+    - LaTeX with Docker: blog/posts/LaTeX_with_Docker.md
