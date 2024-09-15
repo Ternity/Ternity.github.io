@@ -24,9 +24,8 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Plans
 - 代码添加行号，复制按钮
-- 文章内部交叉引用
-- 提示块的实现
-
+- 文章内部交叉引用，现在可以实现文章之间引用，见[程俊组wiki](https://wiki.cheng-group.net/wiki/how_to_edit/howtodo/#_13)
+- 提示块的实现,可见[程俊组wiki](https://wiki.cheng-group.net/wiki/how_to_edit/howtodo/#_13)
 
 ## 美化和多功能
 <br>代码高亮的方法: [快来美化你的MKDocs吧](https://juejin.cn/post/7066641709198737416)

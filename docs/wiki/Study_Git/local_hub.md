@@ -262,7 +262,34 @@ To abort and get back to the state before "git rebase", run "git rebase --abort"
 git add docs/index.md
 git rebase --continue
 ```
-重复上述步骤，直到rebase完成。
+有时候continue之后，git会提醒你还有哪些冲突需要合并。重复上述步骤，直到rebase完成。这时候continue会提醒你是否忘记使用add？这基本意味着rebase完成，continue的输出如下：
+```bash
+Applying: change file docs/index.md
+No changes - did you forget to use 'git add'?
+If there is nothing left to stage, chances are that something else
+already introduced the same changes; you might want to skip this patch.
+
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+```
+这时候使用`git branch`查看当前分支，会发现正处于一个叫`no branch`的分支：
+```bash
+* (no branch, rebasing mkdocs)
+  dev
+  main
+  mkdocs
+```
+使用`git status`会发现同样处于rebase状态：
+```bash
+rebase in progress; onto 73c2da0
+You are currently rebasing branch 'mkdocs' on '73c2da0'.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+```
+然后我们就可以使用`git rebase --skip`完成这次rebase了。使用`git branch`发现已经不在rebase状态了。
 
 ### 6.4 合并修改 <a id ='charpt6.4'></a>
 更新完`dev`分支后，我们可以将本地`dev`分支更新到远程仓库的`dev`分支：
