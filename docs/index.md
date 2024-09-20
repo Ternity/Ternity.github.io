@@ -8,7 +8,7 @@
 
 ## There are 3 parts in my homepage Now:
 - [MKDocs](https://ternity.github.io/How_to_edit/howtodo/)
-- [Wiki](https://ternity.github.io/wiki/MSD/MSD_Diffusion-Coefficient_and_calculation/)
+- [Wiki](https://ternity.github.io/wiki/Periodic_Table/Periodic_Table/)
 - [Blog](https://ternity.github.io/blog/)
 
 ## Plans
