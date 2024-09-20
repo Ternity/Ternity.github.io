@@ -41,6 +41,8 @@ nav:
   - MKDocs: 
     - How_to_edit/howtodo.md
   - Wiki:
+    - Periodic Table:
+      - wiki/Periodic_Table/Periodic_Table.md
     - MSD学习笔记:
       - wiki/MSD/MSD_Diffusion-Coefficient_and_calculation.md
     - RDF学习笔记:
