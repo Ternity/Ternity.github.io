@@ -71,6 +71,9 @@ extra_javascript:
 extra_css:
   - css/extra.css
 
+extra_css:
+  - css/extra.css
+
 nav:
   - Home: index.md
   - MKDocs: 
