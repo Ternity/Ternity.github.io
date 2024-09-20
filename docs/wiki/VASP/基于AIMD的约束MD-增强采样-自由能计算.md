@@ -39,7 +39,7 @@ $$ exp^{{-{\frac  {\Delta A_{{1\rightarrow 2}}}{k_{B}\,T}}}}={\bigg \langle }exp
 
 关于Jarzynski恒等式的模拟方法的详细说明，请参阅[参考文献](https://pubs.acs.org/doi/abs/10.1021/jp044556a)J.P.C.B.和[参考文献](https://doi.org/10.1103/PhysRevLett.78.2690)P.R.L.。（著名的热力学第二定律唯一的等式表述形式）
 
-> ### Note: 该方法最有用的是，在启动任何更准确和耗时的模拟之前，快速测试集体变量的质量。
+> Note: 该方法最有用的是，在启动任何更准确和耗时的模拟之前，快速测试集体变量的质量。
 
 ### VASP参数
 
@@ -72,6 +72,12 @@ $$\Delta A_{1 \to 2}=\int_{\xi(1)}^{\xi(2)}\left( \frac{\vartheta A}{\vartheta \
 当设置`LBLUEOUT=True`时候，REPORT文件将会有<a href="onenote:#基于AIMD的约束MD\增强采样\自由能计算&section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&page-id={A6EFC5DD-E66F-48DC-A7FD-DF96EA8B8395}&object-id={1F96F061-4EE6-41F7-8274-9086418EF1B4}&A7&base-path=https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one">一系列输出</a>,其中第二项为$|\mathbf{Z}|^{-1/2}$，第四项为$|\mathbf{Z}|^{-1/2}*(\lambda+GkT)$。然后自由能梯度即为二者之间的商。
 
 GkT是热力学积分项，通常情况下，它的值很小（10<sup>-13</sup>），可以忽略。因此自由能的梯度基本等于λ，而拉格朗日乘数法中，λ是施加在约束坐标上的**力**。因此可以直接λ对约束坐标的微分进行积分，得到自由能。
+
+!!! info "关于slow-growth方法得到的自由能在不同反应坐标下的讨论"
+      非平衡态的自由能计算方法(基于[Jarzynski恒等式](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.78.2690))，所观测到的现象（状态）能否和自由能图谱上的能量对应？考虑到这是不可逆功\--可逆功平均值\--自由能的近似路径，而我们的有限时间模拟明显是不可逆的，因此可以认为自由能与过程是有关的。<font color=Blue><span class="del">这也就解释了C-C耦合过程中CO吸附到表面的自由能变和直接考察CO吸附自由能变的数值差异原因。</span></font>也就是在MD过程中观察到的现象是可以视为必要的、必须经历的过程（比如CO要先吸附）。这也和约束MD方法中拉格朗日乘子λ是能量最小化下的λ相一致，即过程中每一步均为平衡态。同时，我们不能将<span class="underline">C-C耦合过程中CO吸附到表面的自由能变和直接考察CO吸附自由能变的数值差异</span>归因到不可逆功上，因为<span class="underline">C-C耦合过程</span>的`反应坐标a`和<span class="underline">CO吸附到表面</span>的`反应坐标b`是不同的，平均力mean force(放在slow-growth语境下称为自由能沿着反应坐标的梯度)是`a方向`的，而不是`b方向`的，自由能是F\_a \* a 而不是F\_b \* b。
+      <br>
+      <br>
+      我们<font color=Red>不能</font>将“C-C耦合过程中CO吸附到表面的系统自由能沿着C-C距离变化”视为“CO吸附到表面的自由能变化”。换一种说法，使用slow-growth方法研究一个指定反应坐标a下系统自由能变，现在我在MD过程中观察到某个现象，其沿着反应坐标b的自由能变<font color=Red>不能</font>使用反应坐标a的自由能变？
 
 ## MetaDynamics方法
 
