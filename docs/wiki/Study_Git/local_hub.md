@@ -297,8 +297,31 @@ nothing to commit, working tree clean
 git push -f origin dev    # 由于rebase，需要强制推送
 ```
 一切准备就绪，我们可以将GitHub的`dev`版本的代码合并到`main`分支，此事即为**Pull Request(PR)**：<br>
-这里需要在GitHub上操作。<br>
+这里需要在GitHub上操作：<br>
 ![Commpare&pull_request](Commpare&pull_request.png)<br>
+当然也可以使用命令行操作：<br>
+```bash
+git log --oneline --graph --all   # 查看提交历史记录和分支合并情况
+```
+输出每次`commit`的哈希值、`commit`信息、分支合并情况等。<br>
+```log
+* 96280a8 (HEAD -> mkdocs, origin/mkdocs) add file about ConstP in CMD
+* 09a9585 change file mkdocs.yml, add file css/extra.css, change file of VASP/blue_moon
+*   149850c Merge branch 'main' into mkdocs
+|\  
+| * edfcb1b merge branch mkdocs to branch min (#10)
+* | 563439b add Periodic Table in wiki part
+* |   ce2bab6 Merge branch 'mkdocs' of github.com:Ternity/Ternity.github.io into mkdocs
+:...skipping...
+* 96280a8 (HEAD -> mkdocs, origin/mkdocs) add file about ConstP in CMD
+* 09a9585 change file mkdocs.yml, add file css/extra.css, change file of VASP/blue_moon
+```
+可以看到`HEAD`指向`mkdocs`分支，`origin/mkdocs`是远程仓库的`mkdocs`分支，`main`分支的`commit`信息是`merge branch mkdocs to branch min (#10)`，这是我们在GitHub上进行的`Pull Request`操作。<br>
+然后可以选定需要开始生成`pull request`的`commit`的哈希值，使用request-pull：
+```bash
+git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs # 可选结束commit [96280a8]
+```
+
 在确认New pull request后，代码管理员有三个选项可选：<br>
 ![merge](merge.png)<br>
 `Merge pull request`：所有添加到`dev`分支的`commit`都会被添加到`main`分支，由于`commit`可能很多，不推荐。<br>
