@@ -296,7 +296,7 @@ nothing to commit, working tree clean
 git push -f origin dev    # 由于rebase，需要强制推送
 ```
 一切准备就绪，我们可以将GitHub的`dev`版本的代码合并到`main`分支，此事即为**Pull Request(PR)**：<br>
-这里需要在GitHub上操作。<br>
+这里需要在GitHub上操作：<br>
 ![Commpare&pull_request](Commpare&pull_request.png)<br>
 当然也可以使用命令行操作：<br>
 ```bash
