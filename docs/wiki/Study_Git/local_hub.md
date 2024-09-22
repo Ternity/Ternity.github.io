@@ -331,6 +331,7 @@ git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs
 ### 6.5 删除分支 <a id ='charpt6.5'></a>
 当`dev`分支的代码合并到`main`分支后，`dev`分支就没有存在的必要了，可以删除。<br>
 GitHub上有操作为`Delete branch`。这样远程仓库的`dev`分支就被删除了。<br>
+![Delete branch](Delete_branch.png)<br>
 然后本地的`dev`分支也可以删除：
 ```bash
 git checkout main   # 本地分支切换到main
