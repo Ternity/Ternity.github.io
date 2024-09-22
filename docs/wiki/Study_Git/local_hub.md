@@ -319,7 +319,7 @@ git log --oneline --graph --all   # 查看提交历史记录和分支合并情�
 可以看到`HEAD`指向`mkdocs`分支，`origin/mkdocs`是远程仓库的`mkdocs`分支，`main`分支的`commit`信息是`merge branch mkdocs to branch min (#10)`，这是我们在GitHub上进行的`Pull Request`操作。<br>
 然后可以选定需要开始生成`pull request`的`commit`的哈希值，使用request-pull：
 ```bash
-git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs # 可选结束commit[96280a8]
+git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs # 可选结束commit [96280a8]
 ```
 
 在确认New pull request后，代码管理员有三个选项可选：<br>
