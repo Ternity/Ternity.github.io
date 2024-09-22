@@ -217,7 +217,6 @@ git branch
 ### 6.2 提交远端 <a id ='charpt6.2'></a>
 将本地git的dev分支推送到远程仓库(`git push origin dev`)。这样就不会影响到远程仓库的main分支的代码。
 ### 6.3 同步远端 <a id ='charpt6.3'></a>
-### 6.3 同步远端 <a id ='charpt6.3'></a>
 一种很常见的情况是，远程仓库中的`main`分支有了更新`update`，而我们的`dev`分支相对于init代码也有了更新`feature`，这时候我们需要测试我们的`feature`能否在main分支更新的`update`下工作。这需要将远程仓库的`main`分支的`update`更新同步到本地仓库的`dev`分支。
 #### 6.3.1 远程仓库`main`分支最新的`update`同步到本地仓库的`main`分支
 首先，我们需要切换当前分支`dev`到`main`分支：
@@ -319,9 +318,8 @@ git log --oneline --graph --all   # 查看提交历史记录和分支合并情�
 可以看到`HEAD`指向`mkdocs`分支，`origin/mkdocs`是远程仓库的`mkdocs`分支，`main`分支的`commit`信息是`merge branch mkdocs to branch min (#10)`，这是我们在GitHub上进行的`Pull Request`操作。<br>
 然后可以选定需要开始生成`pull request`的`commit`的哈希值，使用request-pull：
 ```bash
-git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs # 可选结束commit [96280a8]
+git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs # 可选结束commit的哈希值[96280a8]
 ```
-
 在确认New pull request后，代码管理员有三个选项可选：<br>
 ![merge](merge.png)<br>
 `Merge pull request`：所有添加到`dev`分支的`commit`都会被添加到`main`分支，由于`commit`可能很多，不推荐。<br>
@@ -332,7 +330,6 @@ git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs
 ### 6.5 删除分支 <a id ='charpt6.5'></a>
 当`dev`分支的代码合并到`main`分支后，`dev`分支就没有存在的必要了，可以删除。<br>
 GitHub上有操作为`Delete branch`。这样远程仓库的`dev`分支就被删除了。<br>
-![Delete branch](Delete_branch.png)<br>
 然后本地的`dev`分支也可以删除：
 ```bash
 git checkout main   # 本地分支切换到main
