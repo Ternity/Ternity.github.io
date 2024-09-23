@@ -61,7 +61,7 @@ nav:
         - wiki/恒电势方法-电荷-极化力场系列/力场下的恒电势/Dipole-polarization-electric_field-force_field-constant_charge-redox_capacity.md
       - DFT静态-AIMD-Geo-Opt下的恒电势:
         - wiki/恒电势方法-电荷-极化力场系列/DFT静态-AIMD-Geo-Opt下的恒电势/Norskov关于能垒的恒电势校正思路.md
-        - 恒电势模拟及避坑指南_DFT-基于电子的恒电势数学模型和意义.md
+        - wiki/恒电势方法-电荷-极化力场系列/DFT静态-AIMD-Geo-Opt下的恒电势/恒电势模拟及避坑指南_DFT-基于电子的恒电势数学模型和意义.md
 
   - Blog:
     - Start: blog/index.md
