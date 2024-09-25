@@ -21,7 +21,7 @@ theme:
 
 plugins:
   - blog:
-      blog_dir: ./blog
+      # blog_dir: ./blog
       blog_toc: true # 设置blog索引页面的目录
       post_date_format: full # 设置blog索引页面的日期格式
       archive_toc: true
@@ -30,9 +30,9 @@ plugins:
       pagination_keep_content: true # 设置blog索引页面的分页内容
       draft_if_future_date: true # 设置如果blog的日期是未来的话，就会被当成草稿不会被发布
 
-  - git-revision-date-localized: # 页面下方创建和修改时间
-      enable_creation_date: true
-      type: timeago
+  # - git-revision-date-localized: # 页面下方创建和修改时间   # 由于github action新建了一个branch，文件都是最新的，所以这个时间没用
+      # enable_creation_date: true
+      # type: timeago
   - glightbox # 图片放大
   - search: # 搜索(选择支持中文、英文)
       separator: '[\u200b\u3000\-、。，．？！；\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
