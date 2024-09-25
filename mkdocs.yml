@@ -98,12 +98,8 @@ nav:
 
   - Blog:
     - blog/index.md
-    # - Start: 
-      # - blog/index.md
-    # - Hello World: 
-      # - blog/posts/hello-world.md
-    # - LaTeX with Docker: 
-      # - blog/posts/LaTeX_with_Docker.md
+    - blog/LaTeX_with_Docker.md
+    - blog/hello-world.md
 
 copyright: Copyright &copy; 2024 - 2024 Qinghan Yu
 
