@@ -217,6 +217,7 @@ git branch
 ### 6.2 提交远端 <a id ='charpt6.2'></a>
 将本地git的dev分支推送到远程仓库(`git push origin dev`)。这样就不会影响到远程仓库的main分支的代码。
 ### 6.3 同步远端 <a id ='charpt6.3'></a>
+### 6.3 同步远端 <a id ='charpt6.3'></a>
 一种很常见的情况是，远程仓库中的`main`分支有了更新`update`，而我们的`dev`分支相对于init代码也有了更新`feature`，这时候我们需要测试我们的`feature`能否在main分支更新的`update`下工作。这需要将远程仓库的`main`分支的`update`更新同步到本地仓库的`dev`分支。
 #### 6.3.1 远程仓库`main`分支最新的`update`同步到本地仓库的`main`分支
 首先，我们需要切换当前分支`dev`到`main`分支：
@@ -330,6 +331,7 @@ git request-pull 09a9585 https://github.com/Ternity/Ternity.github.io.git mkdocs
 ### 6.5 删除分支 <a id ='charpt6.5'></a>
 当`dev`分支的代码合并到`main`分支后，`dev`分支就没有存在的必要了，可以删除。<br>
 GitHub上有操作为`Delete branch`。这样远程仓库的`dev`分支就被删除了。<br>
+![Delete branch](Delete_branch.png)<br>
 然后本地的`dev`分支也可以删除：
 ```bash
 git checkout main   # 本地分支切换到main

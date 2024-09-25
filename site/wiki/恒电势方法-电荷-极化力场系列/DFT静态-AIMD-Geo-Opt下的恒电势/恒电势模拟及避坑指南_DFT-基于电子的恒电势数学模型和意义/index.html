@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://ternity.github.io/wiki/RDF/RDF%E3%80%81%E9%85%8D%E4%BD%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7%E4%B8%AD%E5%BA%94%E7%94%A8/">
+        <link rel="canonical" href="https://ternity.github.io/wiki/%E6%81%92%E7%94%B5%E5%8A%BF%E6%96%B9%E6%B3%95-%E7%94%B5%E8%8D%B7-%E6%9E%81%E5%8C%96%E5%8A%9B%E5%9C%BA%E7%B3%BB%E5%88%97/DFT%E9%9D%99%E6%80%81-AIMD-Geo-Opt%E4%B8%8B%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF/%E6%81%92%E7%94%B5%E5%8A%BF%E6%A8%A1%E6%8B%9F%E5%8F%8A%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97_DFT-%E5%9F%BA%E4%BA%8E%E7%94%B5%E5%AD%90%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%84%8F%E4%B9%89/">
       
       
-        <link rel="prev" href="../../MSD/MSD_Diffusion-Coefficient_and_calculation/">
+        <link rel="prev" href="../Norskov%E5%85%B3%E4%BA%8E%E8%83%BD%E5%9E%92%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF%E6%A0%A1%E6%AD%A3%E6%80%9D%E8%B7%AF/">
       
       
-        <link rel="next" href="../../Study_Git/local_hub/">
+        <link rel="next" href="../../../../blog/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>RDF、配位数及其在增强采样中应用 - Qinghan's Personal Homepage</title>
+        <title>恒电势模拟及避坑指南 DFT 基于电子的恒电势数学模型和意义 - Qinghan's Personal Homepage</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
       
       
 
@@ -45,16 +45,16 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../../../css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -63,7 +63,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#radial-distribution-function-rdf" class="md-skip">
+        <a href="#dft-" class="md-skip">
           跳转至
         </a>
       
@@ -89,9 +89,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Qinghan&#39;s Personal Homepage" class="md-header__button md-logo" aria-label="Qinghan's Personal Homepage" data-md-component="logo">
+    <a href="../../../.." title="Qinghan&#39;s Personal Homepage" class="md-header__button md-logo" aria-label="Qinghan's Personal Homepage" data-md-component="logo">
       
-  <img src="../../../icons/blue_notebook.png" alt="logo">
+  <img src="../../../../icons/blue_notebook.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RDF、配位数及其在增强采样中应用
+              恒电势模拟及避坑指南 DFT 基于电子的恒电势数学模型和意义
             
           </span>
         </div>
@@ -184,7 +184,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -203,7 +203,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../How_to_edit/howtodo/" class="md-tabs__link">
+        <a href="../../../../How_to_edit/howtodo/" class="md-tabs__link">
           
   
   MKDocs
@@ -231,7 +231,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../Periodic_Table/Periodic_Table/" class="md-tabs__link">
+        <a href="../../../Periodic_Table/Periodic_Table/" class="md-tabs__link">
           
   
   Wiki
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -285,9 +285,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Qinghan&#39;s Personal Homepage" class="md-nav__button md-logo" aria-label="Qinghan's Personal Homepage" data-md-component="logo">
+    <a href="../../../.." title="Qinghan&#39;s Personal Homepage" class="md-nav__button md-logo" aria-label="Qinghan's Personal Homepage" data-md-component="logo">
       
-  <img src="../../../icons/blue_notebook.png" alt="logo">
+  <img src="../../../../icons/blue_notebook.png" alt="logo">
 
     </a>
     Qinghan's Personal Homepage
@@ -302,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../How_to_edit/howtodo/" class="md-nav__link">
+      <a href="../../../../How_to_edit/howtodo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Periodic_Table/Periodic_Table/" class="md-nav__link">
+      <a href="../../../Periodic_Table/Periodic_Table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -556,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MSD/MSD_Diffusion-Coefficient_and_calculation/" class="md-nav__link">
+      <a href="../../../MSD/MSD_Diffusion-Coefficient_and_calculation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -582,8 +582,6 @@
                 
   
   
-    
-  
   
   
     
@@ -598,11 +596,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
@@ -616,7 +616,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             RDF学习笔记
@@ -627,28 +627,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    RDF、配位数及其在增强采样中应用
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../RDF/RDF%E3%80%81%E9%85%8D%E4%BD%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7%E4%B8%AD%E5%BA%94%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,102 +639,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#radial-distribution-function-rdf" class="md-nav__link">
-    <span class="md-ellipsis">
-      radial distribution function (RDF)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="radial distribution function (RDF)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rdf-define" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF define
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-solid" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in solid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-liquid" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in liquid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-gas" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in gas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#coordination-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      coordination number
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculation-cn-by-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      calculation CN by Python
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cn-and-applications-in-enhanced-sampling" class="md-nav__link">
-    <span class="md-ellipsis">
-      CN and applications in enhanced sampling
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -818,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Study_Git/local_hub/" class="md-nav__link">
+      <a href="../../../Study_Git/local_hub/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -892,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../VASP/%E5%9F%BA%E4%BA%8EAIMD%E7%9A%84%E7%BA%A6%E6%9D%9FMD-%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7-%E8%87%AA%E7%94%B1%E8%83%BD%E8%AE%A1%E7%AE%97/" class="md-nav__link">
+      <a href="../../../VASP/%E5%9F%BA%E4%BA%8EAIMD%E7%9A%84%E7%BA%A6%E6%9D%9FMD-%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7-%E8%87%AA%E7%94%B1%E8%83%BD%E8%AE%A1%E7%AE%97/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,8 +804,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -932,13 +820,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
         
           
           <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
@@ -952,7 +838,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             恒电势方法-电荷-极化力场系列
@@ -1008,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%81%92%E7%94%B5%E5%8A%BF%E6%96%B9%E6%B3%95-%E7%94%B5%E8%8D%B7-%E6%9E%81%E5%8C%96%E5%8A%9B%E5%9C%BA%E7%B3%BB%E5%88%97/%E5%8A%9B%E5%9C%BA%E4%B8%8B%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF/Dipole-polarization-electric_field-force_field-constant_charge-redox_capacity/" class="md-nav__link">
+      <a href="../../%E5%8A%9B%E5%9C%BA%E4%B8%8B%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF/Dipole-polarization-electric_field-force_field-constant_charge-redox_capacity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,8 +920,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1045,13 +933,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
@@ -1065,7 +951,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_6_2">
             <span class="md-nav__icon md-icon"></span>
             DFT静态-AIMD-Geo-Opt下的恒电势
@@ -1079,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%81%92%E7%94%B5%E5%8A%BF%E6%96%B9%E6%B3%95-%E7%94%B5%E8%8D%B7-%E6%9E%81%E5%8C%96%E5%8A%9B%E5%9C%BA%E7%B3%BB%E5%88%97/DFT%E9%9D%99%E6%80%81-AIMD-Geo-Opt%E4%B8%8B%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF/Norskov%E5%85%B3%E4%BA%8E%E8%83%BD%E5%9E%92%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF%E6%A0%A1%E6%AD%A3%E6%80%9D%E8%B7%AF/" class="md-nav__link">
+      <a href="../Norskov%E5%85%B3%E4%BA%8E%E8%83%BD%E5%9E%92%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF%E6%A0%A1%E6%AD%A3%E6%80%9D%E8%B7%AF/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,10 +983,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%E6%81%92%E7%94%B5%E5%8A%BF%E6%96%B9%E6%B3%95-%E7%94%B5%E8%8D%B7-%E6%9E%81%E5%8C%96%E5%8A%9B%E5%9C%BA%E7%B3%BB%E5%88%97/DFT%E9%9D%99%E6%80%81-AIMD-Geo-Opt%E4%B8%8B%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF/%E6%81%92%E7%94%B5%E5%8A%BF%E6%A8%A1%E6%8B%9F%E5%8F%8A%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97_DFT-%E5%9F%BA%E4%BA%8E%E7%94%B5%E5%AD%90%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%84%8F%E4%B9%89/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    恒电势模拟及避坑指南 DFT 基于电子的恒电势数学模型和意义
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1109,6 +1015,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是恒电荷模拟
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是恒电势模拟
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是恒电势模拟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      周期性体系带电问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      恒电势数学模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      波恩-奥本海默近似在电化学界面的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      恒电势计算的那些坑
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="恒电势计算的那些坑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1dipole" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.用了隐式溶剂模型就千万别加任何形式的dipole矫正
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.隐式溶剂和显式溶剂尽量不要混用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.能量参考点要统一
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.如果电势难以收敛，提高电子步的精度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.强电场下慎用隐式溶剂模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1188,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1209,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1247,6 +1284,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1255,46 +1294,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#radial-distribution-function-rdf" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      radial distribution function (RDF)
+      什么是恒电荷模拟
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="radial distribution function (RDF)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是恒电势模拟
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是恒电势模拟">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rdf-define" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      RDF define
+      周期性体系带电问题
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rdf-in-solid" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      RDF in solid
+      恒电势数学模型
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rdf-in-liquid" class="md-nav__link">
+  <a href="#-" class="md-nav__link">
     <span class="md-ellipsis">
-      RDF in liquid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-gas" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in gas
+      波恩-奥本海默近似在电化学界面的应用
     </span>
   </a>
   
@@ -1306,29 +1345,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#coordination-number" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      coordination number
+      恒电势计算的那些坑
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="恒电势计算的那些坑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1dipole" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.用了隐式溶剂模型就千万别加任何形式的dipole矫正
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#calculation-cn-by-python" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      calculation CN by Python
+      2.隐式溶剂和显式溶剂尽量不要混用
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#cn-and-applications-in-enhanced-sampling" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      CN and applications in enhanced sampling
+      3.能量参考点要统一
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.如果电势难以收敛，提高电子步的精度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.强电场下慎用隐式溶剂模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1347,59 +1419,67 @@
                   
 
 
-  <h1>RDF、配位数及其在增强采样中应用</h1>
-
-<h2 id="radial-distribution-function-rdf">radial distribution function (RDF)</h2>
-<h3 id="rdf-define">RDF define</h3>
-<p><a class="glightbox" href="../image_1.14c83607.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="water_RDF" src="../image_1.14c83607.png" /></a></p>
-<p>径向分布函数，RDF，定义如下：</p>
-<div class="arithmatex">\[g(r)=\frac{dn_r}{dV_r∗\rho}\approx\frac{dn_r}{4\pi r^2 dr∗\rho}\]</div>
-<p>其中<span class="arithmatex">\(dN_r\)</span>是厚度为<span class="arithmatex">\(d_r\)</span>的球壳中粒子数(上式中球壳体积仅在<span class="arithmatex">\(d_r \rightarrow 0\)</span>时成立)</p>
-<p>其物理意义是在一个粒子距离r处找到另一指定类型粒子的概率。</p>
-<p>​<span class="arithmatex">\(g(r)\)</span>​将平均密度​<span class="arithmatex">\(\rho^{bulk}\)</span>​和局部密度​<span class="arithmatex">\(\rho\)</span>​联系起来：</p>
-<div class="arithmatex">\[ \rho(r) = \rho^{bulk}g(r)  \]</div>
-<p>位于中央的参考分子（粒子）附近（r值小）局部密度​<span class="arithmatex">\(\rho\)</span>​不同于系统的平均密度​<span class="arithmatex">\(\rho^{bulk}\)</span>​; 参考分子距离较远处的（r值大）局部密度​<span class="arithmatex">\(\rho\)</span>​接近系统的平均密度​<span class="arithmatex">\(\rho^{bulk}\)</span>​</p>
-<h3 id="rdf-in-solid">RDF in solid</h3>
-<p><a class="glightbox" href="../image_2.d60e2754.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_2.d60e2754.png" /></a></p>
-<p>固体是有规律的周期性体系，粒子在晶格位置附近震动。因此可以观察到两点：</p>
-<ul>
-<li>由数个峰组成，峰与峰之间g(r)=0，说明峰之间找不到原子，因为粒子周期性排布</li>
-<li>每个峰并非一个线，而是有宽度的，因为原子在晶格位置附近震动</li>
-</ul>
-<h3 id="rdf-in-liquid">RDF in liquid</h3>
-<p>液体属于近程有序远程无序。当r较小，出现数个峰。第一个峰最尖锐，通常出现在​​​​<span class="arithmatex">\(\sigma\)</span>​​​​,表示第一个coordination sphere（配位壳，即​​​​<span class="arithmatex">\(dr\)</span>​​​​所定义的球壳状区域）;随后峰值将大致间隔​​​​<span class="arithmatex">\(\sigma\)</span>​​​​出现，但高度远小于第一个。当r值增大，粒子之间彼此独立、无关，g(r)​​​<span class="arithmatex">\(\rightarrow 1\)</span>​​​, ​​<span class="arithmatex">\(\rho^{local}\rightarrow\rho^{bulk}\)</span>​​。</p>
-<h3 id="rdf-in-gas">RDF in gas</h3>
-<p>气体没有规则结构，真实气体RDF只有一个coordination sphere， 且将迅速衰减之气体的正常<!--[if mathML]><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>𝜌</mml:mi><mml:mrow><mml:mi>b</mml:mi><mml:mi>u</mml:mi><mml:mi>l</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msup></mml:math><![endif]-->​​</p>
-<ul>
-<li>g(r) = 0, when r &lt; <span class="arithmatex">\(\sigma\)</span></li>
-<li>g(r) &gt; 1, when <span class="arithmatex">\(\sigma &lt; r &lt; 2\sigma\)</span></li>
-<li>g(r) = 1, when r &gt; 2<span class="arithmatex">\(\sigma\)</span></li>
-</ul>
-<h2 id="coordination-number">coordination number</h2>
-<p>coordination number, CN，配位数，用于表示每个coordination sphere（配位壳）中找到粒子的数量。个根据之前定义的RDF公式，在球坐标系中将径向分布函数g(r)积分至它的第一个极小值，得到配位数：</p>
-<div class="arithmatex">\[ n(r') = 4\pi\rho\int_0^{r'} g(r)r^2dr  \]</div>
-<p>分子间相互作用，类似于LJ势，吸引力较弱且各向同性，斥力强且短程，因此当液体中分子间没有氢键或静电相互作用，分子将以有效的形式推积，从而避免排斥。最有效的排列方式就是每个粒子有12个近邻，即CN=12.</p>
-<p>当分子间有氢键和静电作用，如水，CN将很小（在第一coordination sphere中=4~5），因为液体将使其在第一个coordination sphere中氢键作用最大化。</p>
-<h2 id="calculation-cn-by-python">calculation CN by Python</h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># under building</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span>
-</span></code></pre></div>
-<h2 id="cn-and-applications-in-enhanced-sampling">CN and applications in enhanced sampling</h2>
-<p>在增强采样中，CN定义为：</p>
-<div class="arithmatex">\[ \sum_{i \in A}1\sum_{j \in B} s_{ij} ​ \]</div>
-<p>当原子i(属于groupA)和j(属于groupB)成键，​<span class="arithmatex">\(s_{ij}\)</span>​=1，反之其他情况=0。通常​<span class="arithmatex">\(s_{ij}\)</span>​使用一个开关函数(switching function), 从而保证CV是连续变化可导的。通常，​<span class="arithmatex">\(s_{ij}\)</span>​被定义为：</p>
-<div class="arithmatex">\[ s(r_{ij}) = \frac{1-(\frac{r_{ij}-d_0}{r_0})^n}{1-(\frac{r_{ij}-d_0}{r_0})^m}  \]</div>
-<p>默认d<sub>0</sub>=0, n=6, m=2n</p>
-<p>公式当中，​<span class="arithmatex">\(r_{ij}\)</span>是两组原子i和j(分属于groupA和B)之间的距离。</p>
-<p><span class="arithmatex">\(d_0\)</span>是公式的阈值，决定<span class="arithmatex">\(r_{ij}\)</span>何时开始影响开关函数<span class="arithmatex">\(s_{ij}\)</span>的值。当<span class="arithmatex">\(r_{ij}\)</span>逐渐接近<span class="arithmatex">\(d_0\)</span>，函数<span class="arithmatex">\(s_{ij}\)</span>逐渐增大至1；当<span class="arithmatex">\(r_{ij}\)</span>远大于<span class="arithmatex">\(d_0\)</span>时，函数<span class="arithmatex">\(s_{ij}\)</span>趋近于0。因此，可以将<span class="arithmatex">\(d_0\)</span>理解为<strong>原子间距离的切换点</strong>，远离<span class="arithmatex">\(d_0\)</span>，原子间相互作用显著减弱。</p>
-<p>​<span class="arithmatex">\(r_0\)</span>​用于控制函数​<span class="arithmatex">\(s_{ij}\)</span>​的平滑程度，从而决定了当原子间距​<span class="arithmatex">\(r_{ij}\)</span>​接近​<span class="arithmatex">\(d_0\)</span>​时候，函数​<span class="arithmatex">\(s_{ij}\)</span>​变化速度。当​<span class="arithmatex">\(r_0\)</span>​越大，函数​<span class="arithmatex">\(s_{ij}\)</span>​变化越平缓，配位数(​<span class="arithmatex">\(s_{ij}\)</span>​)连续性越好。但是​<span class="arithmatex">\(r_0\)</span>​过大，配位数(​<span class="arithmatex">\(s_{ij}\)</span>​)变得不精确。至于配位数需要连续变化，是因为原子间相互作用强度连续变化而不是离散的。</p>
-<p>当开关函数应用在配位数中，通常设置​​<span class="arithmatex">\(d_0=0\)</span>​​,而将阈值的功能赋予给参数​​<span class="arithmatex">\(r_0\)</span>​​。当​​<span class="arithmatex">\(r_{ij}0.5\)</span>​​，视为两原子间成键。这样，我们通过设置不同的阈值​​<span class="arithmatex">\(r_0\)</span>​​来区分不同的状态。对于阈值的选取，通常经验是设置在1.0-1.5 Å，在此基础上迭代优化阈值的选取。</p>
-<p>其他类型的开关函数定义可见<a href="https://www.plumed.org/doc-v2.7/user-doc/html/switchingfunction.html">plumed官网</a></p>
-<p>可使用邻居列表减少计算量，具体见<a href="https://www.plumed.org/doc-v2.7/user-doc/html/_c_o_o_r_d_i_n_a_t_i_o_n.html">plumed官网</a>。其他操作及选项也可见前述网址。</p>
-<p>一般用于侦测原子之间的键或侦测不同反应路径。</p>
-<p><a class="glightbox" href="../image_3.3d6f2d89.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_3.3d6f2d89.png" /></a></p>
-<p><a class="glightbox" href="../image_4.aa4df3e9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_4.aa4df3e9.png" /></a></p>
-<p><a class="glightbox" href="../image_5.f9ba7c69.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_5.f9ba7c69.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">转载说明</p>
+<p>本文绝大部分内容转自<a href="https://www.zhihu.com/people/xia-zhao-ming">爱因斯坦的小迷弟，夏招明老师</a>的知乎文章: <a href="https://zhuanlan.zhihu.com/p/676795392">常电势(恒电势)模拟科普以及避坑指南</a></p>
+</div>
+<h1 id="dft-">DFT视角下的恒电势数学模型及物理意义-电子调控的恒电势</h1>
+<p><strong>首先声明，所有模拟方法都有漏洞，没有任何方法是完美的，根据自己的研究内容选择最适合自己的方法即可，不要迷信某一种方法绝对正确。</strong></p>
+<p><strong>人不可能做到绝对理性，所有算法都会有bug，但我们对于问题的理解程度会随着时间越来越深刻，要用发展的眼光看待过去的事物。</strong></p>
+<h2 id="_1">什么是恒电荷模拟</h2>
+<p>在了解恒电势模拟之前，我们先要了解恒电荷模拟。恒电荷模拟就是进行电化学模拟时，体系的电荷保持不变。周期性体系中改变电荷比较危险（后文会详细介绍），因此最保险的做法就是只计算不带电荷的中性体系。</p>
+<p>但是电化学步骤中很多基元反应涉及离子和电荷转移。中性体系无法获得此类基元反应的自由能，通常的做法是采用Nørskov著名的计算氢电极模型(CHE model)，根据某个电化学反应的标准电极电势和能斯特方程计算某个浓度和电压下离子的自由能。</p>
+<p>中性表面与带电表面对中间体的吸附差异非常大，如果要模拟<font color=Red>带电表面</font>，可以在表面放置几个反号离子，比如模拟带负电的表面，可以在表面放置几个K原子。由于整个体系是中性的，K原子容易释放电子变成K+离子，表面得到电子变成带负电的表面(DFT做电子结构优化自动得到这样的电子结构分布，更多讨论见<a href="../../力场下的恒电势/Dipole-polarization-electric_field-force_field-constant_charge-redox_capacity">Wiki: 偶极、极化、电场、力场、恒电荷、氧化还原能力 王飞腾博士讨论</a>)。控制K原子的数量就可以控制表面电荷量，从而模拟表面带不同电量时对物种的吸附。</p>
+<h2 id="_2">什么是恒电势模拟</h2>
+<p>恒电荷模拟有许多问题无法解决，比如无法模拟涉及电荷转移的基元步骤的过渡态，无法模拟电极表面的电荷随反应进行的涨落等等，因此要用到恒电势模拟</p>
+<p>恒电势模拟有很多个名字，比如grand canonical method，fix-potential method，constant potential method，fix-Fermi-level method等等，其实都是类似的。顾名思义，就是让体系的电势固定，而让电荷涨落。它首先要解决周期体系带电的问题。</p>
+<h3 id="_3">周期性体系带电问题</h3>
+<p>周期体系一个晶胞带电相当于所有周期镜像全部带电，这会导致电子的电势能变成无穷。为了计算带电体系，大多数第一性原理软件(比如VASP)会在晶胞中加入<strong>均匀背景电荷</strong>平衡掉体系的净电荷，从而使晶胞仍然是中性。<strong>均匀背景电荷</strong>本身是不物理的，如果我们的体系是一个表面(slab)与真空层组成，那么真空层的任何位置都会有背景电荷。<strong>无论真空层取得多大，真空的静电势随真空层厚度的变化趋势永远不会收敛</strong>，电子没有一个稳定的能量参考点。所以在周期性体系里加电荷算出的能量不准，该操作非常危险。（单独优化结构没有太大问题，用来对比能量时无法保证不同体系的真空能级一致）</p>
+<p>该问题可以通过引入隐式溶剂模型解决。隐式溶剂模型的本质是将溶剂当作具有某种介电常数的连续流体，通过泊松玻尔兹曼方程计算溶剂化能。极性溶剂对表面电荷和偶极都有屏蔽作用，所以电子的静电势不会受到周期镜像净电荷的影响。类似于带电表面在溶剂中诱导出bound charge和偶极，抵消了带电表面本身的影响。并且不同于均匀背景电荷，诱导出的bound charge可近似理解成电极在溶液中吸附的反号电荷，具有物理意义。加入隐式溶剂后，真空静电势很容易收敛。</p>
+<p><a class="glightbox" href="../image_1.46c48177.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_1.46c48177.png" /></a></p>
+<p><a href="https://jdftx.org/FixedPotential.html">https://jdftx.org/FixedPotential.html</a></p>
+<h3 id="_4">恒电势数学模型</h3>
+<p>真实的电化学环境中电子来源于电源，但电源又在我们研究的系统（电极表面）之外，电源是环境中的电子的粒子源。<font color=Red>电子的能量参考点</font>为电源中电子的<font color=Red>化学势</font>（<span class="arithmatex">\(\mu\)</span>），恒电势意味着<span class="arithmatex">\(\mu\)</span>是<font color=Red>常数</font>。在巨正则（grand canonical）系综中，巨正则能量（<span class="arithmatex">\(\Omega\)</span>）需要通过正则能量(<span class="arithmatex">\(\mathbf{A}\)</span>)<font color=Red>扣掉</font>电子能量参考点的能量<font color=Red> <span class="arithmatex">\([(N_e-N_{e,PZC})\mu]\)</span> </font>。</p>
+<div class="arithmatex">\[ \Omega(\mathbf{\vec{r_n}},N_e) = A(\mathbf{\vec{r_n},N_e}) - (N_e - N_{e,PZC})\cdot \mu\]</div>
+<p>等式两边同时取全微分</p>
+<div class="arithmatex">\[ \nabla  \Omega d\vec{r_n} + \frac{\partial \Omega}{\partial N_e} dN_e = \nabla A d\vec{r_n} + \left(  \frac{\partial A}{\partial N_e}- \mu   \right) dN_e  \]</div>
+<p>观察全微分的系数，得到：</p>
+<div class="arithmatex">\[ (\nabla \Omega - \nabla A)d\vec{r_n} = [(\frac{\partial A}{\partial N_e} - \mu) - \frac{\partial \Omega}{\partial N_e}] dN_e  \]</div>
+<p>如果​​<span class="arithmatex">\(\frac{\partial\Omega}{\partial N_e}=\frac{\partial A}{\partial N_e}-\mu=E_{Fermi}-\mu\)</span>​​</p>
+<p>那么 ​<span class="arithmatex">\(\nabla\Omega=\nabla A=-F\)</span>​ ，正则系综的力完全等同于巨正则系综的力。我们可以直接把软件计算出的正则系综的力用于巨正则系综的结构优化。在做结构优化得到能量极小值点时，力 ​<span class="arithmatex">\(F=-\nabla\Omega=-\nabla A=0\)</span>​ , 且 ​<span class="arithmatex">\(\frac{\partial\Omega}{\partial N_e}=E_{Fermi}-\mu=0\)</span>​ ，即费米能级必须收敛于<span class="arithmatex">\(\mu\)</span>，这也是为什么有的地方称这种计算叫做fix-Fermi-level method。实现方法也很简单，就是给体系中增加或减少电子，使得费米能级等于<span class="arithmatex">\(\mu\)</span>。</p>
+<p>具体的计算代码可以参考：</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//github.com/hellozhaoming/FCP-vasp-ase">GitHub FCP-vasp-ase</a>  2.0 版本 <br>
+相应的论文: <a href="https://doi.org/10.1021/acs.jctc.3c00237">JCTC 2023, 19, 15, 5168–5175  夏招明，肖海： Grand Canonical Ensemble Modeling of Electrochemical Interfaces Made Simple</a> 对应代码的1.0版本  <a id ='JCTC_xiaohai'></a></p>
+<h3 id="-">波恩-奥本海默近似在电化学界面的应用</h3>
+<p>如果把​<span class="arithmatex">\(\frac{\partial\Omega}{\partial N_e}=E_{Fermi}-\mu=0\)</span>​ 的状态当作电子数的基态，把​<span class="arithmatex">\(F=-\nabla\Omega=-\nabla A=0\)</span>​ 当作结构变化的基态。通常（尤其是导体）电子传输的速率比原子移动的速率快很多，所以电子数基态很容易到达，结构演变在电子数基态上进行，采用这个近似即让每一个离子步的电子数收敛，进行力相关的模拟，比如波恩奥本海默分子动力学(BOMD),过渡态搜索（NEB，dimmer）等。</p>
+<p>有些文章认为并不是每一个离子步其电子数都到达了基态，电子转移的速率受限于电极的电容和电阻（欧姆定律）。因此每一个离子步的电子数不一定完全收敛，每个时间步长改变的电子数上限由电极的电容和电阻决定。如果电子数没有达到基态，即体系的费米能级在μ附近涨落，类比于允许某个温度下体系的温度涨落可以定义热浴（thermostat），也可以定义potentiostat使费米能级在μ附近涨落。参考这篇文章：</p>
+<p><a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.126.136803">PhysRevLett.126.136803 2021 Dielectric Properties of Nanoconfined Water: A Canonical Thermopotentiostat Approach</a></p>
+<p>上述方法基于恒电容假设，即电容是一个常数。也有文章认为电容不可能是一个常数，结构涨落必然导致电容涨落，电容不是一个常数，而是随结构的变化而变化。电容涨落、电子数涨落、电势涨落三者是相互耦合的。每一离子步都计算出电容，然后根据欧姆定律计算电子数的变化量：</p>
+<p><a href="#JCTC_xiaohai">JCTC_肖海</a></p>
+<h2 id="_5">恒电势计算的那些坑</h2>
+<h3 id="1dipole">1.用了隐式溶剂模型就千万别加任何形式的dipole矫正</h3>
+<p>隐式溶剂模型本身就可以屏蔽表面的dipole，如果加了dipole矫正，反而多了额外的dipole，此时原子受力不正确，结构优化时优化不到能量极小值点。</p>
+<p><a class="glightbox" href="../image_3.279d3008.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_3.279d3008.jpg" /></a></p>
+<p>IDIPOL=3,结构优化时能量可能越来越高</p>
+<p><a class="glightbox" href="../image_4.ca89bea7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_4.ca89bea7.png" /></a></p>
+<p>没有加IDIPOL，能量越来越低</p>
+<h3 id="2">2.隐式溶剂和显式溶剂尽量不要混用</h3>
+<p>隐式溶剂不能描述氢键作用以及其他的溶剂量子效应，所以很多人想再加显式溶剂。由于隐式溶剂是连续介质模型，显式溶剂的分子间隙中也会存在隐式溶剂，同时使用两种溶剂等于计算了两遍溶剂效应，力是错误的，溶剂分子容易散掉。如果一定要加显式溶剂，推荐使用GPAW的SJM模型，可以定义solvated jellium的边界范围，使其与显式溶剂不交叠。</p>
+<p><a href="https://gpaw.readthedocs.io/tutorialsexercises/electrostatics/sjm/solvated_jellium_method.html">Solvated Jellium Method (SJM)</a></p>
+<p>或者不使用隐式溶剂，直接显式溶剂加均匀带电平板模型平衡掉体系的净电荷。</p>
+<p>有些文章同时使用了显式的水分子层和隐式溶剂，但是显式水分子层没有散，说明他们的脚本里原子的受力排除了溶剂效应double counting的影响，或者使用自定义的隐式溶剂模型实现隐式溶剂显式溶剂边界不重叠</p>
+<h3 id="3">3.能量参考点要统一</h3>
+<p>恒电势计算中电子的能量参考点是电源的μ，这个μ是环境中粒子源的化学势，与系统无关。很多文章里能量表达式里把μ替代成了系统内部的费米能级。这在费米能级完全收敛于μ时没有影响，但如果收敛阈值不够高，将会带来能量误差。</p>
+<p>许多第一性原理计算的软件，比如vasp，电子能的能量参考点是系统的平均静电势，不是真空静电势，所以真空能级非零。而电子的化学势μ通常转化成绝对电极电势的形式，能量参考点是真空，所以<strong>不论是费米能级还是电子能，全都要做真空能级矫正。</strong>尤其是体系电荷改变会导致真空能级改变，如果没有真空能级矫正可能得出错误的能量。</p>
+<p>如何判断自己的能量矫正是对的？</p>
+<p>很简单，改变电子数，做一系列的静态计算，观察得到的能量极小值点是不是电势收敛的点。同时要注意提高电子步计算精度，如果精度太差，恒电势计算很难收敛。</p>
+<p><a class="glightbox" href="../image_5.127ced1e.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_5.127ced1e.jpg" /></a></p>
+<h3 id="4">4.如果电势难以收敛，提高电子步的精度</h3>
+<p>如上图，如果电子步精度不够，势能面误差大，任何程序都难以找到能量极小值点</p>
+<h3 id="5">5.强电场下慎用隐式溶剂模型</h3>
+<p>如果离子带正电，同时电极带很强的负电，二者又靠的很近，离子和电极之间有很强的电场，可能在隐式溶剂中极化出无数不物理的偶极，类似于介质被强电场击穿，离子（与表面）通过这些偶极相互作用，而无法描述离子（与表面）直接的相互作用。结构优化完后一定要做一个bound charge图，观察电荷分布是否符合物理图像。</p>
+<p>（未完待续，欢迎在评论区补充你遇到的坑）</p>
+<p><strong>（原创文章发布不易，转载请注明出处）</strong></p>
 
 
 
@@ -1458,12 +1538,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant.progress", "content.code.copy", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant.progress", "content.code.copy", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

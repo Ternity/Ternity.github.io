@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://ternity.github.io/wiki/RDF/RDF%E3%80%81%E9%85%8D%E4%BD%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7%E4%B8%AD%E5%BA%94%E7%94%A8/">
+        <link rel="canonical" href="https://ternity.github.io/wiki/VASP/%E5%9F%BA%E4%BA%8EAIMD%E7%9A%84%E7%BA%A6%E6%9D%9FMD-%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7-%E8%87%AA%E7%94%B1%E8%83%BD%E8%AE%A1%E7%AE%97/">
       
       
-        <link rel="prev" href="../../MSD/MSD_Diffusion-Coefficient_and_calculation/">
+        <link rel="prev" href="../../Study_Git/local_hub/">
       
       
-        <link rel="next" href="../../Study_Git/local_hub/">
+        <link rel="next" href="../../%E6%81%92%E7%94%B5%E5%8A%BF%E6%96%B9%E6%B3%95-%E7%94%B5%E8%8D%B7-%E6%9E%81%E5%8C%96%E5%8A%9B%E5%9C%BA%E7%B3%BB%E5%88%97/%E5%8A%9B%E5%9C%BA%E4%B8%8B%E7%9A%84%E6%81%92%E7%94%B5%E5%8A%BF/Dipole-polarization-electric_field-force_field-constant_charge-redox_capacity/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>RDF、配位数及其在增强采样中应用 - Qinghan's Personal Homepage</title>
+        <title>基于AIMD的约束MD/增强采样/自由能计算 - Qinghan's Personal Homepage</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#radial-distribution-function-rdf" class="md-skip">
+        <a href="#aimdmd" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RDF、配位数及其在增强采样中应用
+              基于AIMD的约束MD/增强采样/自由能计算
             
           </span>
         </div>
@@ -582,8 +582,6 @@
                 
   
   
-    
-  
   
   
     
@@ -598,11 +596,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
@@ -616,7 +616,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             RDF学习笔记
@@ -627,28 +627,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    RDF、配位数及其在增强采样中应用
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../RDF/RDF%E3%80%81%E9%85%8D%E4%BD%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7%E4%B8%AD%E5%BA%94%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,102 +639,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#radial-distribution-function-rdf" class="md-nav__link">
-    <span class="md-ellipsis">
-      radial distribution function (RDF)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="radial distribution function (RDF)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rdf-define" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF define
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-solid" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in solid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-liquid" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in liquid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-gas" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in gas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#coordination-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      coordination number
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculation-cn-by-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      calculation CN by Python
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cn-and-applications-in-enhanced-sampling" class="md-nav__link">
-    <span class="md-ellipsis">
-      CN and applications in enhanced sampling
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -844,8 +730,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -858,13 +746,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
@@ -878,7 +764,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             VASP学习笔记
@@ -889,10 +775,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../VASP/%E5%9F%BA%E4%BA%8EAIMD%E7%9A%84%E7%BA%A6%E6%9D%9FMD-%E5%A2%9E%E5%BC%BA%E9%87%87%E6%A0%B7-%E8%87%AA%E7%94%B1%E8%83%BD%E8%AE%A1%E7%AE%97/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    基于AIMD的约束MD/增强采样/自由能计算
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -901,6 +807,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mdconstrained-molecular-dynamic" class="md-nav__link">
+    <span class="md-ellipsis">
+      约束MD(Constrained molecular dynamic)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-growth-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      缓慢生长方法(slow-growth approach)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="缓慢生长方法(slow-growth approach)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      理论基础
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vasp" class="md-nav__link">
+    <span class="md-ellipsis">
+      VASP参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blue-moon-ensemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blue-moon ensemble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      MetaDynamics方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iconst-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      ICONST file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ICONST file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      flag类型：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      STATUS类型：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-incarincrem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips: 可以使用该文件结合INCAR参数INCREM实现盒子指定角度(αβγ)的控制/不变
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-incarvalue_max-value_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips: 可以使用该文件结合INCAR参数VALUE_MAX VALUE_MIN实现指定坐标的上下限
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#increm" class="md-nav__link">
+    <span class="md-ellipsis">
+      INCREM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lblueout" class="md-nav__link">
+    <span class="md-ellipsis">
+      LBLUEOUT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1247,6 +1311,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1255,46 +1321,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#radial-distribution-function-rdf" class="md-nav__link">
+  <a href="#mdconstrained-molecular-dynamic" class="md-nav__link">
     <span class="md-ellipsis">
-      radial distribution function (RDF)
+      约束MD(Constrained molecular dynamic)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="radial distribution function (RDF)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-growth-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      缓慢生长方法(slow-growth approach)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="缓慢生长方法(slow-growth approach)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rdf-define" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      RDF define
+      理论基础
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rdf-in-solid" class="md-nav__link">
+  <a href="#vasp" class="md-nav__link">
     <span class="md-ellipsis">
-      RDF in solid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-liquid" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in liquid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rdf-in-gas" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDF in gas
+      VASP参数
     </span>
   </a>
   
@@ -1306,27 +1363,96 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#coordination-number" class="md-nav__link">
+  <a href="#blue-moon-ensemble" class="md-nav__link">
     <span class="md-ellipsis">
-      coordination number
+      Blue-moon ensemble
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculation-cn-by-python" class="md-nav__link">
+  <a href="#metadynamics" class="md-nav__link">
     <span class="md-ellipsis">
-      calculation CN by Python
+      MetaDynamics方法
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cn-and-applications-in-enhanced-sampling" class="md-nav__link">
+  <a href="#iconst-file" class="md-nav__link">
     <span class="md-ellipsis">
-      CN and applications in enhanced sampling
+      ICONST file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ICONST file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      flag类型：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      STATUS类型：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-incarincrem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips: 可以使用该文件结合INCAR参数INCREM实现盒子指定角度(αβγ)的控制/不变
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-incarvalue_max-value_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips: 可以使用该文件结合INCAR参数VALUE_MAX VALUE_MIN实现指定坐标的上下限
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#increm" class="md-nav__link">
+    <span class="md-ellipsis">
+      INCREM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lblueout" class="md-nav__link">
+    <span class="md-ellipsis">
+      LBLUEOUT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference:
     </span>
   </a>
   
@@ -1347,59 +1473,130 @@
                   
 
 
-  <h1>RDF、配位数及其在增强采样中应用</h1>
-
-<h2 id="radial-distribution-function-rdf">radial distribution function (RDF)</h2>
-<h3 id="rdf-define">RDF define</h3>
-<p><a class="glightbox" href="../image_1.14c83607.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="water_RDF" src="../image_1.14c83607.png" /></a></p>
-<p>径向分布函数，RDF，定义如下：</p>
-<div class="arithmatex">\[g(r)=\frac{dn_r}{dV_r∗\rho}\approx\frac{dn_r}{4\pi r^2 dr∗\rho}\]</div>
-<p>其中<span class="arithmatex">\(dN_r\)</span>是厚度为<span class="arithmatex">\(d_r\)</span>的球壳中粒子数(上式中球壳体积仅在<span class="arithmatex">\(d_r \rightarrow 0\)</span>时成立)</p>
-<p>其物理意义是在一个粒子距离r处找到另一指定类型粒子的概率。</p>
-<p>​<span class="arithmatex">\(g(r)\)</span>​将平均密度​<span class="arithmatex">\(\rho^{bulk}\)</span>​和局部密度​<span class="arithmatex">\(\rho\)</span>​联系起来：</p>
-<div class="arithmatex">\[ \rho(r) = \rho^{bulk}g(r)  \]</div>
-<p>位于中央的参考分子（粒子）附近（r值小）局部密度​<span class="arithmatex">\(\rho\)</span>​不同于系统的平均密度​<span class="arithmatex">\(\rho^{bulk}\)</span>​; 参考分子距离较远处的（r值大）局部密度​<span class="arithmatex">\(\rho\)</span>​接近系统的平均密度​<span class="arithmatex">\(\rho^{bulk}\)</span>​</p>
-<h3 id="rdf-in-solid">RDF in solid</h3>
-<p><a class="glightbox" href="../image_2.d60e2754.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_2.d60e2754.png" /></a></p>
-<p>固体是有规律的周期性体系，粒子在晶格位置附近震动。因此可以观察到两点：</p>
-<ul>
-<li>由数个峰组成，峰与峰之间g(r)=0，说明峰之间找不到原子，因为粒子周期性排布</li>
-<li>每个峰并非一个线，而是有宽度的，因为原子在晶格位置附近震动</li>
-</ul>
-<h3 id="rdf-in-liquid">RDF in liquid</h3>
-<p>液体属于近程有序远程无序。当r较小，出现数个峰。第一个峰最尖锐，通常出现在​​​​<span class="arithmatex">\(\sigma\)</span>​​​​,表示第一个coordination sphere（配位壳，即​​​​<span class="arithmatex">\(dr\)</span>​​​​所定义的球壳状区域）;随后峰值将大致间隔​​​​<span class="arithmatex">\(\sigma\)</span>​​​​出现，但高度远小于第一个。当r值增大，粒子之间彼此独立、无关，g(r)​​​<span class="arithmatex">\(\rightarrow 1\)</span>​​​, ​​<span class="arithmatex">\(\rho^{local}\rightarrow\rho^{bulk}\)</span>​​。</p>
-<h3 id="rdf-in-gas">RDF in gas</h3>
-<p>气体没有规则结构，真实气体RDF只有一个coordination sphere， 且将迅速衰减之气体的正常<!--[if mathML]><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>𝜌</mml:mi><mml:mrow><mml:mi>b</mml:mi><mml:mi>u</mml:mi><mml:mi>l</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msup></mml:math><![endif]-->​​</p>
-<ul>
-<li>g(r) = 0, when r &lt; <span class="arithmatex">\(\sigma\)</span></li>
-<li>g(r) &gt; 1, when <span class="arithmatex">\(\sigma &lt; r &lt; 2\sigma\)</span></li>
-<li>g(r) = 1, when r &gt; 2<span class="arithmatex">\(\sigma\)</span></li>
-</ul>
-<h2 id="coordination-number">coordination number</h2>
-<p>coordination number, CN，配位数，用于表示每个coordination sphere（配位壳）中找到粒子的数量。个根据之前定义的RDF公式，在球坐标系中将径向分布函数g(r)积分至它的第一个极小值，得到配位数：</p>
-<div class="arithmatex">\[ n(r') = 4\pi\rho\int_0^{r'} g(r)r^2dr  \]</div>
-<p>分子间相互作用，类似于LJ势，吸引力较弱且各向同性，斥力强且短程，因此当液体中分子间没有氢键或静电相互作用，分子将以有效的形式推积，从而避免排斥。最有效的排列方式就是每个粒子有12个近邻，即CN=12.</p>
-<p>当分子间有氢键和静电作用，如水，CN将很小（在第一coordination sphere中=4~5），因为液体将使其在第一个coordination sphere中氢键作用最大化。</p>
-<h2 id="calculation-cn-by-python">calculation CN by Python</h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># under building</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span>
+<h1 id="aimdmd">基于AIMD的约束MD/增强采样/自由能计算</h1>
+<hr />
+<h2 id="mdconstrained-molecular-dynamic">约束MD(Constrained molecular dynamic)</h2>
+<p>约束MD本质上是约束条件下的最优化问题，因此自然想到了利用拉格朗日乘子法。具体而言，使用<a href="http://dx.doi.org/10.1016/0021-9991(77)90098-5">shake</a>算法实现约束的分子动力学，该算法本质使用了拉格朗日乘子法来寻找有约束条件的最小化问题。系统的拉格朗日量扩展可以写为：</p>
+<div class="arithmatex">\[ \mathcal{L}^*(q,p)=\mathcal{L}(q,p)+\sum_{i=1}^{r} \lambda_{i}\sigma_{i}(q) \qquad  \]</div>
+<p>其中, <span class="arithmatex">\(\lambda_i\)</span>是与几何约束<span class="arithmatex">\(\sigma_i(q)\)</span>相关的拉格朗日乘子,而几何约束定义为：</p>
+<div class="arithmatex">\[\sigma_{i}(q)=\xi_{i}(q)-\xi_{i}\]</div>
+<p>其中，<span class="arithmatex">\(\xi_i(q)\)</span>是几何参数，<span class="arithmatex">\(\xi_i\)</span>是模拟期间固定的<span class="arithmatex">\(\xi_i(q)\)</span>的值。</p>
+<p>shake算法中，拉格朗日乘子<span class="arithmatex">\(\lambda_i\)</span>采用迭代方法确定：</p>
+<ol>
+<li>标准MD，蛙跳算法计算新位置​<span class="arithmatex">\(q_{i}^{t+\Delta_{t}}\)</span>​</li>
+<li>利用新位置​<span class="arithmatex">\(q_{i}^{t+\Delta_{t}}\)</span>计算所有拉格朗日乘子<span class="arithmatex">\(\lambda_i\)</span></li>
+<li>通过添加由于恢复力（与<span class="arithmatex">\(\lambda_k\)</span>成正比）的贡献来更新速度和位置</li>
+<li>迭代2-4步骤直至<span class="arithmatex">\(|\sigma_{i}(q)|\)</span>小于预定义的容差(SHAKETOL参数)，或迭代次数超过SHAKEMAXITER参数</li>
+</ol>
+<h2 id="slow-growth-approach">缓慢生长方法(slow-growth approach)</h2>
+<h3 id="_1">理论基础</h3>
+<p>VASP当中实现了<a href="https://www.vasp.at/wiki/index.php/Slow-growth_approach">近似的缓慢生长方法</a>, 该方法同样定义了一个几何参数​<span class="arithmatex">\(\xi\)</span>​, 其特征值以速度<span class="arithmatex">\(\dot{\xi}\)</span>从初态1线性变化到末态2。执行1→2变换的功为：</p>
+<div class="arithmatex">\[ \omega_{1\rightarrow2}^{irrev}=\int_{\xi(1)}^{\xi(2)}(\frac{\partial V(q)}{\partial \xi}) \dot{\xi}dt \qquad  \]</div>
+<p>当​​<span class="arithmatex">\(\lim_{\dot{\xi} \to 0}\)</span>​​, 功​<span class="arithmatex">\(\omega_{1\rightarrow2}^{irrev}\)</span>​ 对应于末态2和初态1之间的自由能差。这个功是基于<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.78.2690">Jarzynski恒等式</a>的、与自由能相关的不可逆功(本来，​​<span class="arithmatex">\(\lim_{\dot{\xi}\to 0}\)</span>，功是可逆功，但是受限于有限的MD轨迹长度，<span class="arithmatex">\(\dot{\xi}\)</span>不可能无限小，因此功是不可逆功):</p>
+<div class="arithmatex">\[ exp^{{-{\frac  {\Delta A_{{1\rightarrow 2}}}{k_{B}\,T}}}}={\bigg \langle }exp^{{-{\frac  {w_{{\rightarrow 2}}^{{irrev}}}{k_{B}\,T}}}}{\bigg \rangle}  \]</div>
+<p>通过上面公式计算的自由能（将PMF近似视为自由能），需要对​<span class="arithmatex">\(exp^{\{-\frac{w_{{\rightarrow 2}}^{{irrev}}}{k_{B}\,T}\}}\)</span>​在1→2变换的许多实现中取平均值。</p>
+<p>基于缓慢增长方法计算的自由能是近似自由能，精度取决于<span class="arithmatex">\(\dot{\xi}\)</span>。而，精度的判断方法可以通过正向（反应物→产物）和逆向(产物→反应物)转变计算得到的自由能分布的滞后性判断；当然，也可以使用Jarzynski恒等式从一系列缓慢增长模拟中计算。Jarzynski恒等式提供了缓慢增长这种非平衡态和从关于状态分布的配分函数得到的自由能这种平衡态之间的桥梁。</p>
+<p>关于Jarzynski恒等式的模拟方法的详细说明，请参阅<a href="https://pubs.acs.org/doi/abs/10.1021/jp044556a">参考文献</a>J.P.C.B.和<a href="https://doi.org/10.1103/PhysRevLett.78.2690">参考文献</a>P.R.L.。（著名的热力学第二定律唯一的等式表述形式）</p>
+<blockquote>
+<p>Note: 该方法最有用的是，在启动任何更准确和耗时的模拟之前，快速测试集体变量的质量。</p>
+</blockquote>
+<h3 id="vasp">VASP参数</h3>
+<p>缓慢生长方法在VASP中仅支持NVT和NVE系综,不允许体积变化,同时仅支持anderson和Nose-Hoover两种控温器.</p>
+<p>在<a href="onenote:#基于AIMD的约束MD\增强采样\自由能计算&section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&page-id={A6EFC5DD-E66F-48DC-A7FD-DF96EA8B8395}&object-id={CF448C7A-7973-4317-93FD-5ECB3FD31E99}&D9&base-path=https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one">ICONST file</a>中定义几何约束,且几何约束的STATUS参数设置为0.在INCAR中,需要使用参数<a href="onenote:#基于AIMD的约束MD\增强采样\自由能计算&section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&page-id={A6EFC5DD-E66F-48DC-A7FD-DF96EA8B8395}&object-id={8695ED68-ACC7-4594-81B1-0BCD865C4A1C}&8C&base-path=https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one">INCREM</a>为STATUS=0的集合约束设置<a href="onenote:#基于AIMD的约束MD\增强采样\自由能计算&section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&page-id={A6EFC5DD-E66F-48DC-A7FD-DF96EA8B8395}&object-id={1CB40155-BE60-483F-A2E3-4B1D84E24AFE}&F3&base-path=https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one">变化速度</a><span class="arithmatex">\(\dot{\xi}\)</span>.当需要计算自由能梯度时候,使用LBLUEOUT=.TRUE.</p>
+<h2 id="blue-moon-ensemble"><a href="https://www.vasp.at/wiki/index.php/Blue-moon_ensemble">Blue-moon ensemble</a></h2>
+<p>简单来说,约束MD产生有偏差的统计平均值,而其正确的平均值可以通过蓝月亮系综平均值(Blue Moon Ensemble Average)获得。进而可以得到自由能梯度和积分得到自由能。且,通过蓝月亮系综平均值,可以从约束MD得到无偏MD的势能平均值(PMF),官方提供了脚本<a href="https://www.vasp.at/wiki/index.php/Blue-moon_ensemble">how to</a> and <a href="https://www.vasp.at/wiki/index.php/Nuclephile_Substitution_CH3Cl_-_SG">Free energy profile</a>.</p>
+<p>具体来说，blue moon ensemble average公式：</p>
+<div class="arithmatex">\[ a(\xi)=\frac{\left&lt;|\mathbf{Z}|^{-1/2}a(\xi^*)\right&gt;_{\xi^*}}{\left&lt;|\mathbf{Z}|^{-1/2}\right&gt;_{\xi^*}}  \]</div>
+<p>其中​<span class="arithmatex">\(\left&lt;\dots\right&gt;_{\xi^∗}\)</span>​表示约束MD得到的括号内量的统计平均值。​<span class="arithmatex">\(\mathbf{Z}\)</span>​是一个质量度量张量，定义:</p>
+<div class="arithmatex">\[ \mathbf{Z}_{\alpha , \beta} = \sum_{i=1}^{3N} m_i^{-1} \nabla_i \xi_\alpha \cdot \nabla_i \xi_\beta , 其中\alpha=1,\dots,r,\beta =1, \dots,r  \]</div>
+<p>然后可以拿到自由能梯度（基于Blue Moon Ensemble）：</p>
+<div class="arithmatex">\[ \left(\frac{\vartheta A}{\vartheta \xi_k}\right)_{\xi^*} = \frac{1}{\left\langle |\mathbf{Z}|^{-1/2} \right\rangle_{\xi^*}} \left\langle |\mathbf{Z}|^{-1/2} \left[ \lambda_k + \frac{k_B T}{2|\mathbf{Z}|} \sum_{j=1}^{r}\left( \mathbf{Z^{-1}} \right)_{kj} \sum_{i=1}^{3N} m_i^{-1} \nabla_i \xi_j \cdot \nabla_i |\mathbf{Z}| \right] \right\rangle_{\xi^*}  \]</div>
+<p>其中<span class="arithmatex">\(\lambda_{\xi_k}\)</span>是拉格朗日乘子方法中约束坐标<span class="arithmatex">\(\xi_k\)</span>的对应拉格朗日乘子。</p>
+<p>然后自由能就可以通过自由能梯度的积分得到，正如<a href="onenote:https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one#基于AIMD的约束MD/增强采样/自由能计算&amp;section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&amp;page-id={A6EFC5DD-E66F-48DC-A7FD-DF96EA8B8395}&amp;object-id={23C3A93F-9438-4EA4-B9DA-894BDA63D4D8}&amp;E8">缓慢生长方法中</a>提到的那样：</p>
+<div class="arithmatex">\[\Delta A_{1 \to 2}=\int_{\xi(1)}^{\xi(2)}\left( \frac{\vartheta A}{\vartheta \xi}\right)_{\xi^*} \cdot d\xi  \]</div>
+<p>当设置<code>LBLUEOUT=True</code>时候，REPORT文件将会有<a href="onenote:#基于AIMD的约束MD\增强采样\自由能计算&section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&page-id={A6EFC5DD-E66F-48DC-A7FD-DF96EA8B8395}&object-id={1F96F061-4EE6-41F7-8274-9086418EF1B4}&A7&base-path=https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one">一系列输出</a>,其中第二项为<span class="arithmatex">\(|\mathbf{Z}|^{-1/2}\)</span>，第四项为<span class="arithmatex">\(|\mathbf{Z}|^{-1/2}*(\lambda+GkT)\)</span>。然后自由能梯度即为二者之间的商。</p>
+<p>GkT是热力学积分项，通常情况下，它的值很小（10<sup>-13</sup>），可以忽略。因此自由能的梯度基本等于λ，而拉格朗日乘数法中，λ是施加在约束坐标上的<strong>力</strong>。因此可以直接λ对约束坐标的微分进行积分，得到自由能。</p>
+<div class="admonition info">
+<p class="admonition-title">关于slow-growth方法得到的自由能在不同反应坐标下的讨论</p>
+<p>非平衡态的自由能计算方法(基于<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.78.2690">Jarzynski恒等式</a>)，所观测到的现象（状态）能否和自由能图谱上的能量对应？考虑到这是不可逆功--可逆功平均值--自由能的近似路径，而我们的有限时间模拟明显是不可逆的，因此可以认为自由能与过程是有关的。<font color=Blue><span class="del">这也就解释了C-C耦合过程中CO吸附到表面的自由能变和直接考察CO吸附自由能变的数值差异原因。</span></font>也就是在MD过程中观察到的现象是可以视为必要的、必须经历的过程（比如CO要先吸附）。这也和约束MD方法中拉格朗日乘子λ是能量最小化下的λ相一致，即过程中每一步均为平衡态。同时，我们不能将<span class="underline">C-C耦合过程中CO吸附到表面的自由能变和直接考察CO吸附自由能变的数值差异</span>归因到不可逆功上，因为<span class="underline">C-C耦合过程</span>的<code>反应坐标a</code>和<span class="underline">CO吸附到表面</span>的<code>反应坐标b</code>是不同的，平均力mean force(放在slow-growth语境下称为自由能沿着反应坐标的梯度)是<code>a方向</code>的，而不是<code>b方向</code>的，自由能是F_a * a 而不是F_b * b。
+  <br>
+  <br>
+  我们<font color=Red>不能</font>将“C-C耦合过程中CO吸附到表面的系统自由能沿着C-C距离变化”视为“CO吸附到表面的自由能变化”。换一种说法，使用slow-growth方法研究一个指定反应坐标a下系统自由能变，现在我在MD过程中观察到某个现象，其沿着反应坐标b的自由能变<font color=Red>不能</font>使用反应坐标a的自由能变？</p>
+</div>
+<h2 id="metadynamics">MetaDynamics方法</h2>
+<p>under construction</p>
+<h2 id="iconst-file">ICONST file</h2>
+<p><a href="https://www.vasp.at/wiki/index.php/ICONST">description</a>：定义和控制几何参数/坐标的<code>文件</code>，例如原子间距、键角、晶格矢量等。在分子动力学模拟中，这些参数/坐标可以被约束或受到偏置势的影响(监视、控制)。输出将会写入REPORT。</p>
+<p>两种类型，基本坐标(键长、键角等)和复杂坐标（基本坐标线性组合）。复杂坐标必须在基本坐标之后定义。即：</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flag<span class="w"> </span>item<span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="w"> </span>...<span class="w"> </span>item<span class="o">(</span>N<span class="o">)</span><span class="w"> </span>status
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>...
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>...
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>flag<span class="w"> </span>c_1<span class="w"> </span>...<span class="w"> </span>c_M<span class="w"> </span>status
 </span></code></pre></div>
-<h2 id="cn-and-applications-in-enhanced-sampling">CN and applications in enhanced sampling</h2>
-<p>在增强采样中，CN定义为：</p>
-<div class="arithmatex">\[ \sum_{i \in A}1\sum_{j \in B} s_{ij} ​ \]</div>
-<p>当原子i(属于groupA)和j(属于groupB)成键，​<span class="arithmatex">\(s_{ij}\)</span>​=1，反之其他情况=0。通常​<span class="arithmatex">\(s_{ij}\)</span>​使用一个开关函数(switching function), 从而保证CV是连续变化可导的。通常，​<span class="arithmatex">\(s_{ij}\)</span>​被定义为：</p>
-<div class="arithmatex">\[ s(r_{ij}) = \frac{1-(\frac{r_{ij}-d_0}{r_0})^n}{1-(\frac{r_{ij}-d_0}{r_0})^m}  \]</div>
-<p>默认d<sub>0</sub>=0, n=6, m=2n</p>
-<p>公式当中，​<span class="arithmatex">\(r_{ij}\)</span>是两组原子i和j(分属于groupA和B)之间的距离。</p>
-<p><span class="arithmatex">\(d_0\)</span>是公式的阈值，决定<span class="arithmatex">\(r_{ij}\)</span>何时开始影响开关函数<span class="arithmatex">\(s_{ij}\)</span>的值。当<span class="arithmatex">\(r_{ij}\)</span>逐渐接近<span class="arithmatex">\(d_0\)</span>，函数<span class="arithmatex">\(s_{ij}\)</span>逐渐增大至1；当<span class="arithmatex">\(r_{ij}\)</span>远大于<span class="arithmatex">\(d_0\)</span>时，函数<span class="arithmatex">\(s_{ij}\)</span>趋近于0。因此，可以将<span class="arithmatex">\(d_0\)</span>理解为<strong>原子间距离的切换点</strong>，远离<span class="arithmatex">\(d_0\)</span>，原子间相互作用显著减弱。</p>
-<p>​<span class="arithmatex">\(r_0\)</span>​用于控制函数​<span class="arithmatex">\(s_{ij}\)</span>​的平滑程度，从而决定了当原子间距​<span class="arithmatex">\(r_{ij}\)</span>​接近​<span class="arithmatex">\(d_0\)</span>​时候，函数​<span class="arithmatex">\(s_{ij}\)</span>​变化速度。当​<span class="arithmatex">\(r_0\)</span>​越大，函数​<span class="arithmatex">\(s_{ij}\)</span>​变化越平缓，配位数(​<span class="arithmatex">\(s_{ij}\)</span>​)连续性越好。但是​<span class="arithmatex">\(r_0\)</span>​过大，配位数(​<span class="arithmatex">\(s_{ij}\)</span>​)变得不精确。至于配位数需要连续变化，是因为原子间相互作用强度连续变化而不是离散的。</p>
-<p>当开关函数应用在配位数中，通常设置​​<span class="arithmatex">\(d_0=0\)</span>​​,而将阈值的功能赋予给参数​​<span class="arithmatex">\(r_0\)</span>​​。当​​<span class="arithmatex">\(r_{ij}0.5\)</span>​​，视为两原子间成键。这样，我们通过设置不同的阈值​​<span class="arithmatex">\(r_0\)</span>​​来区分不同的状态。对于阈值的选取，通常经验是设置在1.0-1.5 Å，在此基础上迭代优化阈值的选取。</p>
-<p>其他类型的开关函数定义可见<a href="https://www.plumed.org/doc-v2.7/user-doc/html/switchingfunction.html">plumed官网</a></p>
-<p>可使用邻居列表减少计算量，具体见<a href="https://www.plumed.org/doc-v2.7/user-doc/html/_c_o_o_r_d_i_n_a_t_i_o_n.html">plumed官网</a>。其他操作及选项也可见前述网址。</p>
-<p>一般用于侦测原子之间的键或侦测不同反应路径。</p>
-<p><a class="glightbox" href="../image_3.3d6f2d89.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_3.3d6f2d89.png" /></a></p>
-<p><a class="glightbox" href="../image_4.aa4df3e9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_4.aa4df3e9.png" /></a></p>
-<p><a class="glightbox" href="../image_5.f9ba7c69.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image_5.f9ba7c69.png" /></a></p>
+<p><code>flag</code>指定了基本坐标的类型(键、角等)。<code>item</code>以空格分隔，按在POSCAR中出现顺序（从1开始）指定离子。<code>status</code>指定了status。假设文件前M行指定了M个基本坐标，最后一行指定了一个复杂坐标，其中<code>c_1</code>……<code>c_M</code>是以空格分隔的复杂坐标<code>c_i</code>列表，用于第i行定义的基本坐标。比如：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>R 1 6 0 # 定义原子 1 和 6之间距离
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>R 1 5 0 # 定义原子 1 和 5之间距离
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>S 1 -1 0 # 定义基本坐标1和2之间的线性组合
+</span></code></pre></div>
+<h4 id="flag">flag类型：</h4>
+<p>R：两原子距离</p>
+<p>A：三原子构成的角，第二个原子为顶点</p>
+<p>T：四个原子构成的二面角(torsional)</p>
+<p>M: 原子1到原子2和3构成键的中心的距离（垂直平分线的长度）</p>
+<p>B：原子1和2构成键的中间到原子3和4构成键的中心的距</p>
+<p>W: 函数 ​​<span class="arithmatex">\(\frac{1-(R/c)^M}{1-(R/c)^N}\)</span>​​，其中 R 是原子1和2之间的键长（Å单位），c 是由item(3)指定的参考键长，指数M和N分别由 item(4) 和 item(5) 定义。其实就是配位数的定义</p>
+<p>X、Y 和 Z：与晶格矢量 a、b 和 c 相关联的分数坐标。</p>
+<p>cX、cY 和 cZ：笛卡尔坐标 x、y 和 z。</p>
+<p>LR：某个晶格矢量 item(1) 的长度。</p>
+<p>LA：两个晶格矢量 item(1) 和 item(2) 之间的夹角。</p>
+<p>LV：晶胞体积（在这种情况下没有定义 item(i)）。</p>
+<p>还有S基本坐标线性组合、C向量模、D坐标数、IS path方法、IZ path方法等</p>
+<h4 id="status">STATUS类型：</h4>
+<p><code>0</code>：坐标被约束；<code>4</code>：坐标受到费米型阶跃函数影响 <code>5</code>：MetaD中集体变量；<code>7</code>：坐标被监视；<code>8</code>：坐标受谐振势影响</p>
+<p>更多使用案例请见<a href="https://www.vasp.at/wiki/index.php/ICONST">官方文档</a></p>
+<blockquote>
+<h3 id="tips-incarincrem">Tips: 可以使用该文件结合INCAR参数INCREM实现盒子指定角度(αβγ)的控制/不变</h3>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ICONST file:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>LA 1 2 0
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>LA 1 3 0
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>LA 2 3 0
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>INCAR file:
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>INCREM = 0.000000001 0.000000001 0.000000001 #file ICONST to contral lattic and atoms
+</span></code></pre></div>
+<blockquote>
+<h3 id="tips-incarvalue_max-value_min">Tips: 可以使用该文件结合INCAR参数VALUE_MAX VALUE_MIN实现指定坐标的上下限</h3>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ICONST file:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cZ 1 7 # 1号原子的z坐标受监控
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>INCAR file:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>VALUE_MAX = 10 # z-axis of atoms 1 must &lt; 10
+</span></code></pre></div>
+<h2 id="increm">INCREM</h2>
+<p>default = 0</p>
+<p><a href="https://www.vasp.at/wiki/index.php/INCREM">description</a>: 在 slow-growth approach中控制转换速度的参数。</p>
+<p>该参数定义了，在<a href="https://www.vasp.at/wiki/index.php/MDALGO#Slowgro">slow-growth 模拟</a>(MDALGO=1|2), <a href="onenote:#AIMD&amp;section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&amp;page-id={FC2F6A49-6022-4C33-BF5D-992AC8305FAC}&amp;object-id={9296AB25-575C-4C52-9100-401EC18735C7}&amp;14&amp;base-path=https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one">ICONST</a>文件中<code>STATUS=0</code>的受控的结构参数(controlled geometric parameter), 每一时间步长增长的大小。</p>
+<p><a href="onenote:#AIMD&amp;section-id={8365C904-43EF-4FFB-9900-552AFAB494A1}&amp;page-id={FC2F6A49-6022-4C33-BF5D-992AC8305FAC}&amp;object-id={9296AB25-575C-4C52-9100-401EC18735C7}&amp;14&amp;base-path=https://njfueducn-my.sharepoint.com/personal/180401224_njfu_edu_cn/Documents/笔记本/各种参考资料/使用方法/VASP.one">ICONST</a>文件中<code>STATUS=0</code>的受控的结构参数都必须提供该参数。</p>
+<h2 id="lblueout">LBLUEOUT</h2>
+<p>default = .FALSE.</p>
+<p><a href="https://www.vasp.at/wiki/index.php/LBLUEOUT">description</a>: 设置为.True.，将自由能梯度输出到REPORT文件,位置位于每个MD步骤之后.</p>
+<p>输出如下:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt;Const_coord
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   cc&gt; R    2.16325   2.16325  0.485234E-05
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>&gt;Blue_moon
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>       lambda         |z|^(-1/2)      GkT           |z|^(-1/2)*(lambda+GkT)
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>b_m&gt; 0.585916E+01 0.215200E+02 -0.117679E+00 0.123556E+03
+</span></code></pre></div>
+<p>如果有多个约束坐标，那么将按顺序打印各个约束坐标的b_m&gt;。</p>
+<p>lambda对Const_coord积分即为自由能。</p>
+<h2 id="reference">Reference:</h2>
+<p><a href="https://www.vasp.at/wiki/index.php/Constrained_molecular_dynamics">Constrained molecular dynamics - VASP Wiki</a></p>
+<p><a href="https://www.vasp.at/wiki/index.php/Slow-growth_approach">Slow-growth approach - VASP Wiki</a></p>
+<p><a href="https://www.vasp.at/wiki/index.php/Blue-moon_ensemble">Blue-moon ensemble - VASP Wiki</a></p>
+<p><a href="https://www.vasp.at/wiki/index.php/Nuclephile_Substitution_CH3Cl_-_SG">Nuclephile Substitution CH3Cl - SG - VASP Wiki</a></p>
+<p><a href="https://wiki.vasp.at/forum/viewtopic.php?t=17582">Free Energy Calculation Using Blue-moon Method - My Community (vasp.at)</a></p>
+<hr />
 
 
 

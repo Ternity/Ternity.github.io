@@ -71,6 +71,9 @@ extra_javascript:
 extra_css:
   - css/extra.css
 
+extra_css:
+  - css/extra.css
+
 nav:
   - Home: index.md
   - MKDocs: 
@@ -93,14 +96,11 @@ nav:
         - wiki/恒电势方法-电荷-极化力场系列/DFT静态-AIMD-Geo-Opt下的恒电势/Norskov关于能垒的恒电势校正思路.md
         - wiki/恒电势方法-电荷-极化力场系列/DFT静态-AIMD-Geo-Opt下的恒电势/恒电势模拟及避坑指南_DFT-基于电子的恒电势数学模型和意义.md
 
-
   - Blog:
     - blog/index.md
-    # - Start: 
-      # - blog/index.md
-    # - Hello World: 
-      # - blog/posts/hello-world.md
-    # - LaTeX with Docker: 
-      # - blog/posts/LaTeX_with_Docker.md
+    - blog/LaTeX_with_Docker.md
+    - blog/hello-world.md
+
+copyright: Copyright &copy; 2024 - 2024 Qinghan Yu
 
 copyright: Copyright &copy; 2024 - 2024 Qinghan Yu
