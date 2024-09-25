@@ -1,10 +1,12 @@
 # Welcome to My Personal Homepage
 ## About Me
-- 🎓 I’m a student on Soochow University(PRC).
+- 🎓 I’m a master student at FUNSOM, Soochow University(PRC).
 - 🌱 I’m currently learning computational chemistry.
-- 💬 Ask me about Molecular Dynamics.
-- 📫 How to reach me: go to [my personal homepage](https://ternity.github.io/) and find my email.
-- 😍 Interests: Bike, GPU, HPC, Tennis🎾, Badminton🏸, OST🎶, Wood product craftsmanship🪵 and so on.
+- 📫 How to reach me: You are welcome to send me an [email](mailto:qhyu@stu.suda.edu.cn) if you have any questions.
+- 😍 Life interests: Bike, GPU, HPC, Tennis🎾, Badminton🏸, OST🎶, Wood product craftsmanship🪵 and so on.
+
+## My Research interests
+My current research interests focus on **molecular dynamics** and its applications in **electrocatalytic dynamic processes**. Traditional electrocatalytic research is usually **static**, as dynamic process research methods represented by AIMD are **slow and expensive**. **Machine learning force field** is a solution to this dilemma. Recently, I have been studying the relationship between the **solvent structure** and catalytic activity at heterogeneous catalytic interfaces. At the same time, I am also interested in the combination of MLFF and **constant potential methods**. Welcome to contact me for more discussion.
 
 ## There are 3 parts in my homepage Now:
 - [MKDocs](https://ternity.github.io/How_to_edit/howtodo/)
