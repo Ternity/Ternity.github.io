@@ -15,6 +15,7 @@ In this post, I will show you how to use LaTeX by docker.<br>
 !!! tldr "写在前面"
     感谢刘云霈博士在[个人博客](https://cloudac7.github.io/p/containerize-your-life-%E5%AE%B9%E5%99%A8%E5%8C%96latex%E7%8E%AF%E5%A2%83%E5%8A%A9%E5%8A%9B%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/)中提供的安装方法，本文主要是根据他的博客实现的。
 
+<!-- more -->
 ## 预先安装
 
 安装docker，vscode，基于code的 Dev Container 插件 和 LaTeX Workshop 插件
