@@ -1,4 +1,5 @@
-已剪辑自: [https://zhuanlan.zhihu.com/p/676795392](https://zhuanlan.zhihu.com/p/676795392)
+!!! info "转载说明"
+    已剪辑自: [https://zhuanlan.zhihu.com/p/676795392](https://zhuanlan.zhihu.com/p/676795392)
 # DFT视角下的恒电势数学模型及物理意义-电子调控的恒电势
 **首先声明，所有模拟方法都有漏洞，没有任何方法是完美的，根据自己的研究内容选择最适合自己的方法即可，不要迷信某一种方法绝对正确。**
 
@@ -10,14 +11,15 @@
 
 但是电化学步骤中很多基元反应涉及离子和电荷转移。中性体系无法获得此类基元反应的自由能，通常的做法是采用Nørskov著名的计算氢电极模型(CHE model)，根据某个电化学反应的标准电极电势和能斯特方程计算某个浓度和电压下离子的自由能。
 
-中性表面与带电表面对中间体的吸附差异非常大，如果要模拟带电表面，可以在表面放置几个反号离子，比如模拟带负电的表面，可以在表面放置几个K原子。由于整个体系是中性的，K原子容易释放电子变成K+离子，表面得到电子变成带负电的表面。控制K原子的数量就可以控制表面电荷量，从而模拟表面带不同电量时对物种的吸附。
+中性表面与带电表面对中间体的吸附差异非常大，如果要模拟<font color=Red>带电表面</font>，可以在表面放置几个反号离子，比如模拟带负电的表面，可以在表面放置几个K原子。由于整个体系是中性的，K原子容易释放电子变成K+离子，表面得到电子变成带负电的表面(DFT做电子结构优化自动得到这样的电子结构分布，更多讨论见[Wiki: 偶极、极化、电场、力场、恒电荷、氧化还原能力 王飞腾博士讨论](../../力场下的恒电势/Dipole-polarization-electric_field-force_field-constant_charge-redox_capacity))。控制K原子的数量就可以控制表面电荷量，从而模拟表面带不同电量时对物种的吸附。
 
-## 什么是常电势(恒电势)模拟
+## 什么是恒电势模拟
 
 恒电荷模拟有许多问题无法解决，比如无法模拟涉及电荷转移的基元步骤的过渡态，无法模拟电极表面的电荷随反应进行的涨落等等，因此要用到恒电势模拟
 
 恒电势模拟有很多个名字，比如grand canonical method，fix-potential method，constant potential method，fix-Fermi-level method等等，其实都是类似的。顾名思义，就是让体系的电势固定，而让电荷涨落。它首先要解决周期体系带电的问题。
 
+### 周期性体系带电问题
 周期体系一个晶胞带电相当于所有周期镜像全部带电，这会导致电子的电势能变成无穷。为了计算带电体系，大多数第一性原理软件(比如VASP)会在晶胞中加入**均匀背景电荷**平衡掉体系的净电荷，从而使晶胞仍然是中性。**均匀背景电荷**本身是不物理的，如果我们的体系是一个表面(slab)与真空层组成，那么真空层的任何位置都会有背景电荷。**无论真空层取得多大，真空的静电势随真空层厚度的变化趋势永远不会收敛**，电子没有一个稳定的能量参考点。所以在周期性体系里加电荷算出的能量不准，该操作非常危险。（单独优化结构没有太大问题，用来对比能量时无法保证不同体系的真空能级一致）
 
 该问题可以通过引入隐式溶剂模型解决。隐式溶剂模型的本质是将溶剂当作具有某种介电常数的连续流体，通过泊松玻尔兹曼方程计算溶剂化能。极性溶剂对表面电荷和偶极都有屏蔽作用，所以电子的静电势不会受到周期镜像净电荷的影响。类似于带电表面在溶剂中诱导出bound charge和偶极，抵消了带电表面本身的影响。并且不同于均匀背景电荷，诱导出的bound charge可近似理解成电极在溶液中吸附的反号电荷，具有物理意义。加入隐式溶剂后，真空静电势很容易收敛。
@@ -26,29 +28,32 @@
 
 [https://jdftx.org/FixedPotential.html](https://jdftx.org/FixedPotential.html)
 
-真实的电化学环境中电子来源于电源，但电源又在我们研究的系统（电极表面）之外，电源是环境中的电子的粒子源。电子的能量参考点为电源中电子的化学势（μ），恒电势意味着μ是常数。在巨正则（grand canonical）系综中，巨正则能量（Ω）需要通过正则能量（A）扣掉电子能量参考点的能量（(Ne-NePZC)μ）。
+### 恒电势数学模型
 
-![](image_2.2c8a7b32.png)
+真实的电化学环境中电子来源于电源，但电源又在我们研究的系统（电极表面）之外，电源是环境中的电子的粒子源。<font color=Red>电子的能量参考点</font>为电源中电子的<font color=Red>化学势</font>（$\mu$），恒电势意味着$\mu$是<font color=Red>常数</font>。在巨正则（grand canonical）系综中，巨正则能量（$\Omega$）需要通过正则能量($\mathbf{A}$)<font color=Red>扣掉</font>电子能量参考点的能量<font color=Red> $[(N_e-N_{e,PZC})\mu]$ </font>。
+
+$$ \Omega(\mathbf{\vec{r_n}},N_e) = A(\mathbf{\vec{r_n},N_e}) - (N_e - N_{e,PZC})\cdot \mu$$
 
 等式两边同时取全微分
 
-$$ \nabla  \Omega dr_n + \frac{\partial \Omega}{\partial N_e} dN_e = \nabla A dr_n + \left(  \frac{\partial A}{\partial N_e}- \mu   \right) dN_e  $$
+$$ \nabla  \Omega d\vec{r_n} + \frac{\partial \Omega}{\partial N_e} dN_e = \nabla A d\vec{r_n} + \left(  \frac{\partial A}{\partial N_e}- \mu   \right) dN_e  $$
 
 观察全微分的系数，得到：
 
-$$ (\nabla \Omega - \nabla A)dr_n = [(\frac{\partial A}{\partial N_e} - \mu) - \frac{\partial \Omega}{\partial N_e}] dN_e  $$
+$$ (\nabla \Omega - \nabla A)d\vec{r_n} = [(\frac{\partial A}{\partial N_e} - \mu) - \frac{\partial \Omega}{\partial N_e}] dN_e  $$
 
 如果​​$\frac{\partial\Omega}{\partial N_e}=\frac{\partial A}{\partial N_e}-\mu=E_{Fermi}-\mu$​​
 
 
 
-那么 ​$\nabla\Omega=\nabla A=-F$​ ，正则系综的力完全等同于巨正则系综的力。我们可以直接把软件计算出的正则系综的力用于巨正则系综的结构优化。在做结构优化得到能量极小值点时，力 ​$F=-\nabla\Omega=-\nabla A=0$​ , 且 ​$\frac{\partial\Omega}{\partial N_e}=E_{Fermi}-\mu=0$​ ，即费米能级必须收敛于μ，这也是为什么有的地方称这种计算叫做fix-Fermi-level method。实现方法也很简单，就是给体系中增加或减少电子，使得费米能级等于μ
+那么 ​$\nabla\Omega=\nabla A=-F$​ ，正则系综的力完全等同于巨正则系综的力。我们可以直接把软件计算出的正则系综的力用于巨正则系综的结构优化。在做结构优化得到能量极小值点时，力 ​$F=-\nabla\Omega=-\nabla A=0$​ , 且 ​$\frac{\partial\Omega}{\partial N_e}=E_{Fermi}-\mu=0$​ ，即费米能级必须收敛于$\mu$，这也是为什么有的地方称这种计算叫做fix-Fermi-level method。实现方法也很简单，就是给体系中增加或减少电子，使得费米能级等于$\mu$。
 
 具体的计算代码可以参考：
 
-[GitHub FCP-vasp-ase](https://link.zhihu.com/?target=https%3A//github.com/hellozhaoming/FCP-vasp-ase)
+[GitHub FCP-vasp-ase](https://link.zhihu.com/?target=https%3A//github.com/hellozhaoming/FCP-vasp-ase)  2.0 版本 <br>
+相应的论文: [JCTC 2023, 19, 15, 5168–5175  夏招明，肖海： Grand Canonical Ensemble Modeling of Electrochemical Interfaces Made Simple](https://doi.org/10.1021/acs.jctc.3c00237) 对应代码的1.0版本  <a id ='JCTC_xiaohai'></a>
 
-
+### 波恩-奥本海默近似在电化学界面的应用
 
 如果把​$\frac{\partial\Omega}{\partial N_e}=E_{Fermi}-\mu=0$​ 的状态当作电子数的基态，把​$F=-\nabla\Omega=-\nabla A=0$​ 当作结构变化的基态。通常（尤其是导体）电子传输的速率比原子移动的速率快很多，所以电子数基态很容易到达，结构演变在电子数基态上进行，采用这个近似即让每一个离子步的电子数收敛，进行力相关的模拟，比如波恩奥本海默分子动力学(BOMD),过渡态搜索（NEB，dimmer）等。
 
@@ -58,7 +63,7 @@ $$ (\nabla \Omega - \nabla A)dr_n = [(\frac{\partial A}{\partial N_e} - \mu) - \
 
 上述方法基于恒电容假设，即电容是一个常数。也有文章认为电容不可能是一个常数，结构涨落必然导致电容涨落，电容不是一个常数，而是随结构的变化而变化。电容涨落、电子数涨落、电势涨落三者是相互耦合的。每一离子步都计算出电容，然后根据欧姆定律计算电子数的变化量：
 
-[JCTC 2023, 19, 15, 5168–5175 清华肖海 Grand Canonical Ensemble Modeling of Electrochemical Interfaces Made Simple](https://pubs.acs.org/doi/10.1021/acs.jctc.3c00237)
+[JCTC_肖海](#JCTC_xiaohai)
 
 ## 恒电势计算的那些坑
 

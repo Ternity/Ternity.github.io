@@ -37,6 +37,8 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
   - css/extra.css
@@ -65,6 +67,9 @@ nav:
 
 
   - Blog:
-    - Start: blog/index.md
-    - Hello World: blog/posts/hello-world.md
-    - LaTeX with Docker: blog/posts/LaTeX_with_Docker.md
+    - Start: 
+      - blog/index.md
+    - Hello World: 
+      - blog/posts/hello-world.md
+    - LaTeX with Docker: 
+      - blog/posts/LaTeX_with_Docker.md
