@@ -2,15 +2,43 @@ site_name: Qinghan's Personal Homepage
 site_url: https://ternity.github.io/
 theme:
   name: material
+  language: zh
+  logo: icons/blue_notebook.png # 页面中顶部栏左侧图标
+  # favicon: icons/science.png # 浏览器页面标签图标
+  # icon:
+    # logo: icons/science.png
+
   features:
-    - navigation.expand
-    - navigation.tabs
+    - navigation.expand     # 目录自动展开子目录
+    - navigation.tabs       # 一级目录融合至顶栏，并且只展示二级目录
     - navigation.sections
     - navigation.top
+    - navigation.instant.progress # 页面顶部显示加载进度条
+    - content.code.copy     # 代码块复制按键
+    - search.suggest        # 搜索建议
+    - search.highlight      # 搜索结果高亮/突出显示
+    - search.share          # 搜索结果分享
 
 plugins:
   - blog:
       blog_dir: ./blog
+      blog_toc: true # 设置blog索引页面的目录
+      post_date_format: full # 设置blog索引页面的日期格式
+      archive_toc: true
+      categories_toc: true
+      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last" # 设置blog索引页面的分页格式
+      pagination_keep_content: true # 设置blog索引页面的分页内容
+      draft_if_future_date: true # 设置如果blog的日期是未来的话，就会被当成草稿不会被发布
+
+  - git-revision-date-localized: # 页面下方创建和修改时间
+      enable_creation_date: true
+      type: timeago
+  - glightbox # 图片放大
+  - search: # 搜索(选择支持中文、英文)
+      separator: '[\u200b\u3000\-、。，．？！；\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      lang: 
+        - zh
+        - en
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -67,9 +95,12 @@ nav:
 
 
   - Blog:
-    - Start: 
-      - blog/index.md
-    - Hello World: 
-      - blog/posts/hello-world.md
-    - LaTeX with Docker: 
-      - blog/posts/LaTeX_with_Docker.md
+    - blog/index.md
+    # - Start: 
+      # - blog/index.md
+    # - Hello World: 
+      # - blog/posts/hello-world.md
+    # - LaTeX with Docker: 
+      # - blog/posts/LaTeX_with_Docker.md
+
+copyright: Copyright &copy; 2024 - 2024 Qinghan Yu

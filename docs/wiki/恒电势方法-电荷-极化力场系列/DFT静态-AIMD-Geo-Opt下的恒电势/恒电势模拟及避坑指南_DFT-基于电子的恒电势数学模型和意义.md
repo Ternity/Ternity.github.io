@@ -1,5 +1,5 @@
 !!! info "转载说明"
-    已剪辑自: [https://zhuanlan.zhihu.com/p/676795392](https://zhuanlan.zhihu.com/p/676795392)
+    本文绝大部分内容转自[爱因斯坦的小迷弟，夏招明老师](https://www.zhihu.com/people/xia-zhao-ming)的知乎文章: [常电势(恒电势)模拟科普以及避坑指南](https://zhuanlan.zhihu.com/p/676795392)
 # DFT视角下的恒电势数学模型及物理意义-电子调控的恒电势
 **首先声明，所有模拟方法都有漏洞，没有任何方法是完美的，根据自己的研究内容选择最适合自己的方法即可，不要迷信某一种方法绝对正确。**
 
