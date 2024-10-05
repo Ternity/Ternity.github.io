@@ -44,7 +44,9 @@ $$ \Delta E(\phi_1) = E_2(\phi_1)-E_1(\phi_1)=E_2(\phi_2)-E_2(\phi_1)+\frac{(q_2
 
 $$ \Delta E(\phi_2) = E_2(\phi_2)-E_1(\phi_2)=E_2(\phi_2)-E_2(\phi_1)-\frac{(q_2 - q_1)(\phi_2 - \phi_1)}{2}  $$
 
-q定义为slab中过量电子的数量，等于溶液中离子的净电荷。可这样理解，对于之前考察的[PCET过程](#PCET)，从IS到FS的反应过程，电荷变化有$\Delta q = q_{FS}-q_{IS}=0-1=-1$。对于从IS到TS的过程，可以使用唯象定律[Butler–Volmer kinetics](https://pubs.rsc.org/en/content/articlelanding/1924/tf/tf9241900729)的转移系数$\beta$确定电荷转移量，假设TS有：
+q定义为slab中过量电子的数量，等于溶液中离子的净电荷。可这样理解，对于之前考察的[PCET过程](#PCET):
+$$*A + H^+ + e^- \to *AH $$
+其中A是​被吸附的中间体。从IS到FS的反应过程，电荷变化有$\Delta q = q_{FS}-q_{IS}=0-1=-1$。对于从IS到TS的过程，可以使用唯象定律[Butler–Volmer kinetics](https://pubs.rsc.org/en/content/articlelanding/1924/tf/tf9241900729)的转移系数$\beta$确定电荷转移量，假设TS有：
 
 $$[*A \dots H]^{+(1-\beta)}+(1-\beta)e^-$$
 
@@ -65,6 +67,13 @@ $$ \frac{d\Delta E}{d \phi} = -\Delta q  $$
 ## 物理图像（对恒电势含义的思考）
 
 对于上面的微分形式，可以有多种解释，我的理解是，对于状态1到状态2或者状态ref到自变量的过程，无论处于何种功函​​$\phi$​​下，电荷的变化​​$\Delta q=q_2 -q_1$​​是相同的。但是不同功函下能量变化却是不同的，而这种“比例”即为电荷变化的负数​​$-\Delta q$​​。官方的解释是电荷的变化给出了电化学过程能量变化的电势依赖性。而且，这种依赖性是**线性变化**的，Norskov的[JPCL Figure 2](https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00382)给出了一个PCET过程在多个功函数​$\phi$​下的计算结果，发现确实呈现线性变化。据此我们可以**外推**至任意电压下的电势和能量变化之间的关系。
+
+## 电荷差值计算
+对于PCET过程，通常计算的​​$\Delta q=q_{FS}-q_{IS}\approx -0.7 eV$​​ 每个状态的q定义为q定义为“slab中过量电子的数量，等于溶液中离子的净电荷”。“slab中过量电子”指<font color=Red>电极表面（催化剂）的电荷</font>，推导过程中说明了这一点。可以使用诸如Barder电荷等分解方案，先计算体系每个原子的电荷，然后再对属于slab原子的电荷求和；当发生吸附或者脱附，属于slab的原子不变，因为考察的是电极表面（催化剂）。这个差值不为\-1不是因为电荷分解方案的误差，而是低精度DFT的自相互作用误差产生的分数界面电荷。这个误差会影响HOMO-LUMO gap。当fermi level 在HOMO-LUMO之间，就会发生界面上的人工电荷转移，使用杂化泛函或者校正过自相互作用的泛函会改善这个误差（似乎程俊、王峰的电解质文献中提到过这个问题，以及电化学界面的电子能级排列，电极电势排列，电解液HOMO、LUMO和金属电极的费米能级 [Chemical Physics Letters 2013](https://www.sciencedirect.com/science/article/pii/S0009261412013310), [Electrochimica Acta 2013](https://www.sciencedirect.com/science/article/pii/S001346861300741X)）。
+<br>当考察的$\beta = -\Delta q$不是初末态差值而是TS-IS，$H*+H^+ + e^- \to H_2 + *$和$*OH+H^+ + e^- \to H_{2}O + *$两个不同过程的$\beta$差别很大。一般认为都是0.5，但是计算结果显示前者为0.5而后者约为0。可能影响因素有：溶剂重组、离子转移或键断裂。
+
+## 电压的计算
+对选定的状态的结构执行单点能计算，使用vaspkit `426`计算功函数$\Phi$,然后根据$U_{SHE}=\frac{\phi-\phi_{SHE}}{e}$计算得到U v.s. SHE。
 
 ## 能量恒电势校正的推导过程
 
