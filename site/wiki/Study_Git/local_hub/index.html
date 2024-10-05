@@ -904,6 +904,15 @@
     </span>
   </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 同步远端
+    </span>
+  </a>
+  
     <nav class="md-nav" aria-label="6.3 同步远端">
       <ul class="md-nav__list">
         
@@ -1348,6 +1357,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../blog/LaTeX_with_Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use LaTeX by docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello world!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
         
   
@@ -1550,6 +1601,15 @@
     </span>
   </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 同步远端
+    </span>
+  </a>
+  
     <nav class="md-nav" aria-label="6.3 同步远端">
       <ul class="md-nav__list">
         
@@ -1576,6 +1636,10 @@
     <span class="md-ellipsis">
       6.3.3 解决冲突
     </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1585,12 +1649,6 @@
   <a href="#64" class="md-nav__link">
     <span class="md-ellipsis">
       6.4 合并修改
-=======
-          <li class="md-nav__item">
-  <a href="#54" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4 合并修改
->>>>>>> create web use mkdocs-material
     </span>
   </a>
   
@@ -1812,6 +1870,7 @@ git告诉我们将要被提交的修改包括README.md文件，那我们就可�
 <h3 id="62">6.2 提交远端 <a id ='charpt6.2'></a></h3>
 <p>将本地git的dev分支推送到远程仓库(<code>git push origin dev</code>)。这样就不会影响到远程仓库的main分支的代码。</p>
 <h3 id="63">6.3 同步远端 <a id ='charpt6.3'></a></h3>
+<h3 id="63_1">6.3 同步远端 <a id ='charpt6.3'></a></h3>
 <p>一种很常见的情况是，远程仓库中的<code>main</code>分支有了更新<code>update</code>，而我们的<code>dev</code>分支相对于init代码也有了更新<code>feature</code>，这时候我们需要测试我们的<code>feature</code>能否在main分支更新的<code>update</code>下工作。这需要将远程仓库的<code>main</code>分支的<code>update</code>更新同步到本地仓库的<code>dev</code>分支。</p>
 <h4 id="631-mainupdatemain">6.3.1 远程仓库<code>main</code>分支最新的<code>update</code>同步到本地仓库的<code>main</code>分支</h4>
 <p>首先，我们需要切换当前分支<code>dev</code>到<code>main</code>分支：
@@ -1911,6 +1970,7 @@ git告诉我们将要被提交的修改包括README.md文件，那我们就可�
 <h3 id="65">6.5 删除分支 <a id ='charpt6.5'></a></h3>
 <p>当<code>dev</code>分支的代码合并到<code>main</code>分支后，<code>dev</code>分支就没有存在的必要了，可以删除。<br>
 GitHub上有操作为<code>Delete branch</code>。这样远程仓库的<code>dev</code>分支就被删除了。<br>
+<a class="glightbox" href="../Delete_branch.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete branch" src="../Delete_branch.png" /></a><br>
 然后本地的<code>dev</code>分支也可以删除：
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main<span class="w">   </span><span class="c1"># 本地分支切换到main</span>
 </span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>dev<span class="w">   </span><span class="c1"># 删除dev分支</span>
