@@ -14,7 +14,8 @@ My current research interests focus on **molecular dynamics** and its applicatio
 - [Blog](https://ternity.github.io/blog/)
 
 ## Plans
-- [ ] 代码添加行号，复制按钮
+GitHub仓库branch控制：[Ternity.github.io](https://github.com/Ternity/Ternity.github.io)
+- [ ] 代码添加行号
 - [ ] 添加作者
 - [ ] 文章内部指定位置的引用，文章之间引用，其他文章指定段落的引用，见[程俊组wiki](https://wiki.cheng-group.net/wiki/how_to_edit/howtodo/#_3)
 - [x] 提示块的实现，可见[程俊组wiki](https://wiki.cheng-group.net/wiki/how_to_edit/howtodo/#_13)
