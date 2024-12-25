@@ -3,8 +3,7 @@ Welcome to my  persional Homepage！
 ## Let‘s strart together!
 **The webpage is currently under construction**
 
-[![GitHub issues][issues-image]][issues-url]
-[![license GPL-3.0][license-image]][license-url]
+![GitHub issues](https://img.shields.io/github/issues/Ternity/Ternity.github.io)
 
 ## Table of Contents (under construction)
 - [MKDocs](https://ternity.github.io/How_to_edit/howtodo/)
