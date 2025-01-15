@@ -1,4 +1,5 @@
 # Welcome to My Personal Homepage
+
 ## About Me
 - 🎓 I’m a master student at FUNSOM, Soochow University(PRC).
 - 🌱 I’m currently learning computational chemistry.
@@ -7,6 +8,11 @@
 
 ## My Research interests
 My current research interests focus on **molecular dynamics** and its applications in **electrocatalytic dynamic processes**. Traditional electrocatalytic research is usually **static**, as dynamic process research methods represented by AIMD are **slow and expensive**. **Machine learning force field** is one of a solution to this dilemma. Recently, I have been studying the relationship between the **solvent structure** and catalytic activity at heterogeneous catalytic interfaces. At the same time, I am also interested in the combination of MLFF and **constant potential methods**. Welcome to contact me for more discussion.
+
+## Motto
+No man ever steps in the same river twice.
+<br>人生没有固定的终点，只有不断流淌的河流。
+<p align="right">--Heraclitus</p>
 
 ## There are 3 parts in my homepage Now:
 - [MKDocs](https://ternity.github.io/How_to_edit/howtodo/)
