@@ -21,7 +21,10 @@ theme:
 
 plugins:
   - blog:
-      # blog_dir: ./blog
+      blog_dir: blog
+      post_dir: "{blog}/posts"
+      # Preserve the existing blog/<filename>/ addresses when enabling the blog plugin.
+      post_url_format: "{file}"
       blog_toc: true # 设置blog索引页面的目录
       post_date_format: full # 设置blog索引页面的日期格式
       archive_toc: true
@@ -112,8 +115,5 @@ nav:
 
   - Blog:
     - blog/index.md
-    - blog/LaTeX_with_Docker.md
-    - blog/hello-world.md
-    - blog/views_on_scientific_innovation.md
 
 copyright: Copyright &copy; 2024 - 2026 Qinghan Yu

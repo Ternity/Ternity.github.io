@@ -1,7 +1,7 @@
 ---
 title: Use LaTeX by docker
 comments: true
-draft: true 
+draft: false
 date: 2024-09-14 
 categories:
   - LaTeX

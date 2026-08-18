@@ -1,6 +1,6 @@
 ---
-Titel: Hello world!
-draft: True
+title: Hello world!
+draft: false
 date: 2024-09-07
 ---
 
